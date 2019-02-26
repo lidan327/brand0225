@@ -1,0 +1,35 @@
+/* style.css */
+
+html,body{
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;
+}
+
+/*index-css*/
+/* 首页头部 start*/
+.index-header{
+	display: flex;
+}
+.index-header>span{
+	flex: 1;
+	color: #fff;
+	font-size: 1.75rem;
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: middle;
+	margin: 20px 0;
+}
+.index-header>span:first-child{
+	margin-left: 1.25rem;
+}
+
+.index-header>span:last-child{
+	text-align: right;
+	margin-right: 1.25rem;
+}
+/* 首页头部 end*/
+
+/* 首页轮播 start*/
+/* 首页轮播 end*/
