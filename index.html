@@ -6,33 +6,204 @@
 		<link rel="stylesheet" href="js/jquery.mobile-1.4.5.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swipeslider.css"/>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.mobile-1.4.5.js"></script>
 	</head>
 	<body>
 		<div data-role="page" class="index-page">
-		
-		  <div class="index-header bg-liner">
-		    <span>登录</span>
-		    <span><img src="img/sy_hongbao_weiqiang.png" alt="" /></span>
-		    <span>注册</span>
-		  </div>
-		
-		  <div data-role="main" class="ui-content">
-		    <p>我现在是一个移动端开发者!!</p>
-		    <div data-role="navbar">
-		      <ul>
-		        <li><a href="#">主页</a></li>
-		        <li><a href="#">第二页</a></li>
-		        <li><a href="#">搜索</a></li>
-		      </ul>
-		    </div>
-		  </div>
-		
-		  <div data-role="footer">
-		    <h1>底部文本</h1>
-		  </div>
-		
+			<div class="index-header bg-liner">
+			    <span>登录</span>
+			    <span><img src="img/index.png" alt="" /></span>
+			    <span>注册</span>
+			</div>
+			
+			<!--轮播开始-->
+			<div class="index-slider">
+				<article class="container">
+				    <section>
+				    	<figure id="full_feature" class="swipslider">
+				    		<ul class="sw-slides">
+				    			<li class="sw-slide">
+				    				<img src="img/huodong-1.png" alt="">
+				    			</li>
+				    			<li class="sw-slide">
+				    				<img src="img/huodong-1-1.png" alt="">
+				    			</li>    
+				    		</ul>
+				    	</figure>
+				      
+				    </section>
+				</article>
+			</div>
+			<!--轮播结束-->
+			
+			<!--首页导航栏 开始-->
+			<div class="index-nav">
+				<div class="nav-menu">
+					<img src="img/sy_ico_chongzhi.png" alt="" />
+					<text>在线充值</text>
+				</div>
+				<div class="nav-menu">
+					<img src="img/sy_ico_tixian.png" alt="" />
+					<text>快速提现</text>
+				</div>
+				<div class="nav-menu">
+					<img src="img/sy_ico_jifen.png" alt="" />
+					<text>积分兑换</text>
+				</div>
+				<div class="nav-menu">
+					<img src="img/sy_ico_kefu.png" alt="" />
+					<text>在线客服</text>
+				</div>
+			</div>
+			<!--首页导航栏 结束-->
+			
+			<!--快报 开始-->
+			<div class="index-news">
+				<img src="img/sy_ico_kuaibao.png" alt="" />
+				<marquee behavior="scroll" direction="left" loop="infinite" scrollamount="5" scrolldelay="30" >乐云棋牌欢迎您！即日起下载APP送500金币！</marquee>
+			</div>
+			<!--快报结束-->
+			
+			<!--每日红包 开始-->
+			<div class="index-dailyrdp">
+				<span class="dailyrdp-font">
+					<img src="img/sy_hongbao_weiqiang.png" alt="" />
+				</span>
+				<span class="dailyrdp-btn">
+					<img src="img/sy_pic_qiang_weiqiang.png" alt="" />
+				</span>
+				
+			</div>
+			<!--每日红包 结束-->
+			
+			
+			<!--游戏大厅 开始-->
+			<div class="game-looby">
+				<div class="looby-title">
+					<img src="img/sy_pic_yxdt.png" alt="" />
+				</div>
+				<div class="looby-item">
+					<span><img src="img/sy_pic_kaiyuan.png" alt="" /></span>
+					<span><img src="img/sy_pic_xinshijie.png" alt="" /></span>
+				</div>
+				<div class="looby-item">
+					<span><img src="img/sy_pic_leyou.png" alt="" /></span>
+					<span><img src="img/sy_pic_ap.png" alt="" /></span>
+				</div>
+			</div>
+			<!--游戏大厅 结束-->
+			
+			
+			<!--中奖排行 开始-->
+			<div class="winner-list">
+				<div class="winner-title">
+					<img src="img/shouye-zhongjiangpaihang.png" alt="" />
+					<text>中奖排行</text>
+				</div>
+				<div class="winner-box">
+					<div class="winner-item">
+						<span class="winner-ind">1</span>
+						<span class="winner-name word-ellipsis">B6***2</span>
+						<span class="winner-game word-ellipsis">天天棋牌-斗地主</span>
+						<span class="winner-prize"><text>6589.4</text>元</span>
+					</div>
+					<div class="winner-item">
+						<span class="winner-ind">2</span>
+						<span class="winner-name word-ellipsis">薛***某</span>
+						<span class="winner-game word-ellipsis">AJQ棋牌-炸金花</span>
+						<span class="winner-prize"><text>6268.7</text>元</span>
+					</div>
+					<div class="winner-item">
+						<span class="winner-ind">3</span>
+						<span class="winner-name word-ellipsis">B6***2</span>
+						<span class="winner-game word-ellipsis">天天棋牌-斗地主</span>
+						<span class="winner-prize"><text>6268.5</text>元</span>
+					</div>
+					<div class="winner-item">
+						<span class="winner-ind">4</span>
+						<span class="winner-name word-ellipsis">B6***2</span>
+						<span class="winner-game word-ellipsis">天天棋牌-斗地主</span>
+						<span class="winner-prize"><text>5068.7</text>元</span>
+					</div>
+					<div class="winner-item">
+						<span class="winner-ind">5</span>
+						<span class="winner-name word-ellipsis">B6***2</span>
+						<span class="winner-game word-ellipsis">天天棋牌-斗地主</span>
+						<span class="winner-prize"><text>4368.8</text>元</span>
+					</div>
+					<div class="winner-item">
+						<span class="winner-ind">6</span>
+						<span class="winner-name word-ellipsis">B6***2</span>
+						<span class="winner-game word-ellipsis">天天棋牌-斗地主</span>
+						<span class="winner-prize"><text>6268.7</text>元</span>
+					</div>
+				</div>
+			</div>
+			<!--中奖排行 结束-->
+			
+						
+			<!--下载app 开始-->
+			<div class="download">
+				<div class="download-ad pull-left">
+					<img src="img/ico-close.png" alt="" />
+					<img src="img/ico-pic-app.png" alt="" />
+					<text>乐云棋牌</text>
+				</div>
+				<div class="download-btn bg-liner pull-right">
+					<text>下载APP</text>
+				</div>
+			</div>
+			<!--下载app 结束-->
+			
+			<!--footer 开始-->
+			<div class="footer">
+				<div class="footer-item active">
+					<img src="img/ico_downtab_shouye_b.png" alt="" />
+					<text>首页</text>
+				</div>
+				<div class="footer-item">
+					<img src="img/ico_downtab_youhui_a.png" alt="" />
+					<text>优惠</text>
+				</div>
+				<div class="footer-item">
+					<img src="img/ico_downtab_game_a.png" alt="" />
+					<text>游戏大厅</text>
+				</div>
+				<div class="footer-item">
+					<img src="img/ico_downtab_tuiguang_a.png" alt="" />
+					<text>推广</text>
+				</div>
+				
+				<div class="footer-item" data-url='src/my.html'>
+					<img src="img/ico_downtab_wode_a.png" alt="" />
+					<text>我的</text>
+				</div>
+			</div>
+			<!--footer 结束-->
+			
 		</div>
+		<script type="text/javascript" src="js/swipeslider.min.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+		      	$('#full_feature').swipeslider();
+		      	$('#content_slider').swipeslider({
+			        transitionDuration: 600,
+			        autoPlayTimeout: 10000,
+			        sliderHeight: '300px'
+			      });
+		      	$('#responsiveness').swipeslider();
+		      	$('#customizability').swipeslider({
+			        transitionDuration: 1500, 
+			        autoPlayTimeout: 4000, 
+			        timingFunction: 'cubic-bezier(0.38, 0.96, 0.7, 0.07)',
+			        sliderHeight: '30%'
+		        });
+		        
+		        //页面跳转
+		    });
+		</script>		
 	</body>
+	
 </html>
