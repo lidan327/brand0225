@@ -1,11 +1,11 @@
 /* basic.css */
 .pull-left{
 	float: left;
-	margin-left: 20px;
+	margin-left: 1.25rem;
 }
 .pull-right{
 	float: right;
-	margin-right: 20px;
+	margin-right: 1.25rem;
 }
 .bg-liner{
 	background: linear-gradient(172deg,#FB6C25,#DC2A01) !important
