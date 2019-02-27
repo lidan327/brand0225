@@ -3,6 +3,7 @@
 html,body{
 	padding: 0;
 	margin: 0;
+	height: 100%;
 	font-size: 62.5%;
 }
 
@@ -239,7 +240,7 @@ html,body{
 .download{
 	height: 50px;
     position: fixed;
-    bottom: 56px;
+    bottom: 53px;
     width: 100%;
 }
 .download>div{
@@ -282,14 +283,19 @@ html,body{
     width: 100%;
     background: #fff;
     font-size: 1.5rem;
-    padding-bottom: 6px;
+    padding-bottom: 3px;
+    border-top: 1px solid #eee;
 }
 .footer>div{
 	flex: 1;
 	text-align: center;
 }
-.footer .active>text{
+.footer .active text{
 	color: #e94510 !important;
+}
+.footer-item>a{
+	display: block;
+	text-decoration: none;
 }
 .footer-item>a img{
 	width: 20px;
@@ -316,21 +322,23 @@ html,body{
 /*我的头部 start*/
 
 .my-header{
-	height: 120px;
+	height: 100px;
 	color: #fff;
 	font-size: 1.75rem;
+	letter-spacing: 0.5px;
 }
 .my-header>.pull-left{
-	margin-top: 30px;
+	margin-top: 20px;
 }
 .my-header>div>span{
 	vertical-align: middle;
 }
 .my-header .head-pic{
 	display: inline-block;
-	width: 68px;
-	height: 68px;
-	border-radius: 68px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	margin-right: 0.5rem;
 }
 .my-header .head-pic>img{
 	width: 100%;
@@ -346,7 +354,8 @@ html,body{
 }
 .my-header .rank-bg{
 	float: left;
-	height: 1.125rem;
+	/*height: 1.125rem;*/
+	height: 0.875rem;
 	width: 7.5rem;
 	border-radius: 2rem;
 	background:#fff ;
@@ -354,51 +363,398 @@ html,body{
 }
 .my-header .rank-bg>span{
 	float: left;
-	height: 1.125rem;
+	/*height: 1.125rem;*/
+	height: 0.875rem;
 	width: 4.5rem;
 	border-radius: 2rem;
 	background:#ffbd13 ;
 }
 .rank>img{
-    vertical-align: middle;
+    vertical-align: top;
     height: 1.125rem;
     margin-left: 0.75rem;
 }
 .rank>text{
-	color: #ffbd13;
-    vertical-align: middle;
+    color: #ffbd13;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 1.25rem;
 }
 .my-header>.pull-right{
 	text-align: right;
-	margin-top: 32px;
+	margin-top: 20px;
 }
 .my-header>.pull-right>span{
 	display: block;
 }
 .my-header .balance{
-	font-weight: 600;
+	/*font-weight: 600;*/
+	font-size: 2rem;
 }
 .my-header>.pull-right>.balance-txt{
 	font-size: 1.5rem!important;
-	margin-top: 1rem;
+	margin-top: 0.25rem;
 }
 .my-header .balance-txt>text{
 	vertical-align: middle;
 }
 .my-header .balance-txt>img{
-	height: 1.25rem;
+	/*height: 1.25rem;*/
+	height: 1.125rem;
 	vertical-align: middle;
 }
 .my-nav{
 	display: flex;
+	background: #fff;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: -10px;
+	padding-top: 1.25rem;
+	height: 8rem;
 }
 .my-nav>div{
     flex: 1;
-    height: 5rem;
+    height: 4rem;
+    color: #666;
     vertical-align: bottom;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     border-right:1px solid #eee ;
 }
+.my-nav>div:last-child{
+    border-right:0;
+}
+.my-nav .nav-menu>text{
+	display: block;
+	text-align: center;
+	font-size: 1.5rem;
+}
+.my-nav .nav-menu>text:first-child{
+	color: #ee775b;
+}
+.my-nav .nav-menu>text:last-child{
+	margin-top: 1.25rem;
+}
 /*我的头部 end*/
+
+/*我的交易 开始*/
+.my-container{
+	background: #f5f5f5;
+	padding-bottom: 1.25rem;
+}
+.my-container .my-title{
+	height: 5.25rem;
+	line-height: 5.25rem;
+	font-size: 1.75rem;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+}
+.my-container .my-title>.pull-left{
+	color: #333;
+}
+.my-container .my-title>.pull-right{
+	color: #666;
+	font-size: 1.5rem !important;
+}
+.my-container .my-title>.pull-right>img,.my-container .my-title>.pull-right>text{
+	height: 1.25rem;
+	vertical-align: middle;
+}
+.my-floor{
+	display: flex;
+	clear: both;
+	background: #fff;
+	padding-bottom: 2.125rem;
+}
+.my-floor>div{
+	flex: 1;
+	text-align: center;
+}
+.my-floor>div img{
+	/*margin-top: 2.5rem;
+	margin-bottom:1.25rem;
+	width: 2.5rem;
+	height: 2.5rem;*/
+	width: 2rem;
+	height: 2rem;
+	margin-top: 2rem;
+	margin-bottom:1rem;
+}
+.my-floor>div text{
+	display: block;
+	text-align: center;
+	color: #666;
+	font-size: 1.5rem;
+	white-space: nowrap;
+}
+.represent-menu>div img,.quick-entry-menu>div img{
+	width: 3rem;
+	height: 3rem;
+}
+.quick-entry{
+	margin-bottom: 53px;
+}
+/*我的交易 结束*/
+
+/*推广页面 开始*/
+.header{
+	height: 5.25rem;
+	line-height: 5.25rem;
+	font-size: 1.875rem;
+	text-align: center;
+	color: #fff;
+}
+.flex{
+	display: flex;
+}
+.flex>div{
+	flex: 1;
+	text-align: center;
+}
+
+.promote-page{
+	background: #f5f5f5;
+	height: 100%;
+}
+.promote-nav{
+	width: 27.25rem;
+	height: 3.75rem;
+	line-height: 3.75rem;
+	color: #999;
+	background: #fff;
+	font-size: 1.5rem;
+	margin: 1.25rem auto;
+	border-radius: 0.625rem;
+	overflow: hidden;
+}
+.promote-nav>div{
+	text-align: center;
+	border-right: 1px solid #eee;
+}
+.promote-nav>div:last-child{
+	border-right: 0;
+}
+.promote-floors{
+	background: #fff;
+	height: 8.75rem;
+	margin-bottom: 1.25rem;
+}
+.promote-floor{
+	height: 5rem;
+	margin-top: 2rem;
+	border-right: 1px solid #eee;
+}
+.promote-floor:last-child{
+	border-right: 0;
+}
+.promote-floor>text{
+	display: block;
+	font-size: 1.5rem;
+	color: #666;
+}
+.promote-floor>text:first-child{
+	color: #ee775b;
+}
+.promote-floor>text:last-child{
+	margin-top: 1.25rem;
+}
+.promote-link{
+	padding-bottom: 1.875rem;
+}
+.promote-link>div{
+	text-align: center;
+}
+.promote-link-title{
+	color: #333;
+	font-size: 1.875rem;
+	padding-top: 0.875rem;
+	padding-bottom: 2.125rem;
+}
+.promote-link-title a{
+	color: #3548da!important;
+}
+.promote-link-inp>div{
+	border: 1px solid #e2e2e2;
+	display: inline-block;
+	width: 56%;
+	height: 3.75rem;
+	background: #fff;
+	line-height: 3.75rem;
+	font-size: 1.5rem;
+	color: #666;
+	vertical-align: middle;
+	border-top-left-radius: 0.75rem;
+	border-bottom-left-radius: 0.75rem;
+	padding: 0 1%;
+}
+.promote-link-inp>button{
+	display: inline-block;
+	width: 20%;
+	height: 3.875rem;
+	line-height: 3.875rem;
+	vertical-align: middle;
+	border: 0;
+	font-size: 1.5rem;
+	border-top-right-radius: 0.75rem;
+	border-bottom-right-radius: 0.75rem;
+}
+.promote-qrcode{
+	background: #fff;
+	padding-bottom: 2.75rem;
+}
+.promote-qrcode-img{
+	text-align: center;
+}
+.promote-qrcode-img>img{
+	/*width: 22.5rem;
+	height: 22.5rem;*/
+	width: 15.5rem;
+	height: 15.5rem;
+	padding: 1.875rem 0;
+}
+.promote-qrcode p{
+	text-align: center;
+	font-size: 1.5rem;
+	color: #333;
+}
+.commission-reward{
+	font-size: 1.6875rem;
+	text-align: center;
+	background: #f5f5f5;
+	padding: 1.25rem 0;
+	margin-bottom: 53px;
+}
+.commission-reward ul li{
+	text-align: left;
+	font-size: 1.5rem;
+	color: #333;
+}
+.commission-reward>div{
+	background: #fff;
+	padding: 2.75rem 0;
+}
+.pmt-detail-container{
+	display: none;
+}
+.pmt-detail-table table{
+	width: 100%;
+	table-layout: fixed;
+	background: #fff;
+	border-collapse: collapse;
+}
+.pmt-detail-table table tr{
+	border-bottom: 1px solid #eee;
+}
+.pmt-detail-table table tr>th,.pmt-detail-container table tr>td{
+	flex: 1;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 4.25rem;
+	line-height: 4.25rem;
+	color: #333;
+	font-size: 1.5rem;
+}
+.pmt-detail-container table tr>td{
+	color: #666!important;
+}
+/*推广页面 结束*/
+
+
+/* 登录页面 css*/
+.login-page{
+	height: 100%;
+	background: #f5f5f5;
+}
+.login-header{
+	height: 37.5rem;
+	border-bottom-left-radius: 3.75rem;
+	border-bottom-right-radius: 3.75rem
+}
+.login-return{
+	text-align: left !important;
+}
+
+.login-return>img{
+	vertical-align: middle;
+	height: 1.875rem;
+	margin: 0 0.5rem 0 1.25rem;
+}
+.login-return>text{
+	vertical-align: middle;
+}
+.login-logo{
+	margin-top: 1.25rem;
+}
+.login-logo>div{
+	width: 21.75rem;
+	height: 21.05rem;
+	margin: auto;
+	
+}
+.login-logo>div img{
+	max-width: 100%;
+}
+.login-card{
+	margin: -10rem 1.25rem 0 1.25rem;
+	background: #fff;
+	border-radius: 1.875rem;
+	padding: 3.75rem 0;
+	
+}
+.login-card .login-item{
+	width: 87%;
+	/*height: 6.25rem;*/
+	height: 5rem;
+	margin: 0 auto 1.875rem;
+	border-radius: 3.75rem;
+	background: #f5f5f5;
+	
+}
+.login-btn,.login-info{
+	width: 87%;
+	margin: auto;
+}
+.login-item-active{
+	border: 1px solid #ee5016;
+}
+.login-card .login-item input{
+	background: transparent;
+	border: 0;
+}
+.login-item img{
+	width: 2rem;
+	height: 2.375rem;
+	margin-left: 2.5rem;
+	/*margin-top: 1.3125rem;*/
+	vertical-align: middle;
+}
+.login-item input{
+	height: 100%;
+	vertical-align: middle;
+	font-size: 1.75rem;
+	margin-left: 1.25rem;
+}
+.login-btn button{
+	width: 100%;
+	height: 4.25rem;
+	border-radius: 3.75rem;
+	border: 0;
+}
+.login-info{
+	font-size: 1.625rem;
+	margin-top: 1.25rem;
+	color: #333;
+}
+.login-info .pull-left{
+	margin-left: 0;
+}
+.login-info .pull-right{
+	margin-right: 0;
+}
+/*登录页面 结束*/
+
+/*注册页面开始*/
+.register-card{
+	margin-top: -32.5rem;
+}
+/*注册页面结束*/

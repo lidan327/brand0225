@@ -8,10 +8,10 @@
 		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
 		<script src="../js/jquery.min.js"></script>
-		<script src="../js/jquery.mobile-1.4.5.js"></script>
+		<!--<script src="../js/jquery.mobile-1.4.5.js"></script>-->
 	</head>
 	<body>
-		<div data-role="page" class="my-page" id="my">
+		<div class="my-page" id="my">
 			
 			<!--我的头部 开始-->
 			<div class="my-header bg-liner">
@@ -44,11 +44,139 @@
 			
 			<!--我的 导航开始-->
 			<div class="my-nav">
-				<div class="nav-menu">今日盈亏（元）</div>
-				<div class="nav-menu">累计提现（元）</div>
-				<div class="nav-menu">累计提现（元）</div>
+				<div class="nav-menu">
+					<text class='yk-money'>0.00</text>
+					<text>今日盈亏（元）</text>
+				</div>
+				<div class="nav-menu">
+					<text class='cz-money'>0.00</text>
+					<text>累计充值（元）</text>
+				</div>
+				<div class="nav-menu">
+					<text class='yk-money'>0.00</text>
+					<text>累计提现（元）</text>
+				</div>
 			</div>
 			<!--我的导航 结束-->
+			
+			
+			<!--我的交易 开始-->
+			<div class="my-deal my-container">
+				<div class="deal-title my-title">
+					<span class="pull-left">我的交易</span>
+					<span class="pull-right">
+						<text>查看全部</text>
+						<img src="../img/arrow-right.png"/>
+					</span>
+				</div>
+				<div class="deal-menu my-floor">
+					<div class="deal-menu-item my-floor-item">
+						<img src="../img/wo_ico_1qb.png" alt="" />
+						<text>全部</text>
+					</div>
+					<div class="deal-menu-item my-floor-item">
+						<img src="../img/wo_ico_2cz.png" alt="" />
+						<text>充值记录</text>
+					</div>
+					<div class="deal-menu-item my-floor-item">
+						<img src="../img/wo_ico_3tx.png" alt="" />
+						<text>提现记录</text>
+					</div>
+				</div>
+			</div>
+			<!--我的交易 结束-->
+			
+			<!--代言中心 开始-->
+			<div class="my-represent my-container">
+				<div class="represent-title my-title">
+					<span class="pull-left">代言中心</span>
+					<span class="pull-right">
+						<text>推荐好友</text>
+						<img src="../img/arrow-right.png"/>
+					</span>
+				</div>
+				<div class="represent-menu my-floor">
+					<div class="represent-menu-item my-floor-item">
+						<img src="../img/wo_ico_sybb.png" alt="" />
+						<text>收益报表</text>
+					</div>
+					<div class="represent-menu-item my-floor-item">
+						<img src="../img/wo_ico_xjyh.png" alt="" />
+						<text>下级用户(7)人</text>
+					</div>
+					<div class="represent-menu-item my-floor-item">
+						<img src="../img/wo_ico_xjjy.png" alt="" />
+						<text>下级交易</text>
+					</div>
+					<div class="represent-menu-item my-floor-item">
+						<img src="../img/wo_ico_tgbz.png" alt="" />
+						<text>推广帮助</text>
+					</div>
+				</div>
+			</div>
+			<!--代言中心 结束-->
+			
+			<!--快捷入口 开始-->
+			<div class="quick-entry my-container">
+				<div class="quick-entry-title my-title">
+					<span class="pull-left">快捷入口</span>
+				</div>
+				<div class="quick-entry-menu my-floor">
+					<div class="quick-entry-item my-floor-item">
+						<img src="../img/wo_ico_yxjl.png" alt="" />
+						<text>游戏记录</text>
+					</div>
+					<div class="quick-entry-item my-floor-item">
+						<img src="../img/wo_ico_edzh.png" alt="" />
+						<text>额度转换</text>
+					</div>
+					<div class="quick-entry-item my-floor-item">
+						<img src="../img/wo_ico_yeb.png" alt="" />
+						<text>余额宝</text>
+					</div>
+					<div class="quick-entry-item my-floor-item">
+						<img src="../img/wo_ico_sz.png" alt="" />
+						<text>账户设置</text>
+					</div>
+				</div>
+			</div>
+			<!--快捷入口 结束-->
+						
+			<!--footer 开始-->
+			<div class="footer">
+				<div class="footer-item">
+					<a href="../index.html">
+						<img src="../img/ico_downtab_shouye_a.png" alt="" />
+						<text>首页</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="discount.html">
+						<img src="../img/ico_downtab_youhui_a.png" alt="" />
+						<text>优惠</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="gameLooby.html">
+						<img src="../img/ico_downtab_game_a.png" alt="" />
+						<text>游戏大厅</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="promote.html">
+						<img src="../img/ico_downtab_tuiguang_a.png" alt="" />
+						<text>推广</text>
+					</a>
+				</div>
+				
+				<div class="footer-item active" data-url='src/my.html'>
+					<a href="#">
+						<img src="../img/ico_downtab_wode_b.png" alt="" />
+						<text>我的</text>
+					</a>
+				</div>
+			</div>
+			<!--footer 结束-->
 		</div>
 		
 	</body>

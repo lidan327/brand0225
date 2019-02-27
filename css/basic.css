@@ -8,6 +8,7 @@
 	margin-right: 1.25rem;
 }
 .bg-liner{
+	color: #fff;
 	background: linear-gradient(172deg,#FB6C25,#DC2A01) !important
 }
 .container{
@@ -15,21 +16,16 @@
   /*max-width: 640px;*/
 }
 
-/* line 30, D:/Temp/github/swipeslider/style.scss */
-a:link {
+/*a:link {
   color: #fff0d5; }
-
-/* line 33, D:/Temp/github/swipeslider/style.scss */
 a:hover {
   color: #aaa3fc; }
 
-/* line 36, D:/Temp/github/swipeslider/style.scss */
 a:active {
   color: #9289ff; }
 
-/* line 39, D:/Temp/github/swipeslider/style.scss */
 a:visited {
-  color: #fff0d5; }
+  color: #fff0d5; }*/
 
 /* line 44, D:/Temp/github/swipeslider/style.scss */
 .swipslider {
@@ -167,4 +163,8 @@ a:visited {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+}
+input:focus, textarea:focus, select:focus{
+	outline: none;
+	outline-offset: 0;
 }

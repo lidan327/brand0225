@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<!--<script src="js/jquery.mobile-1.4.5.js"></script>-->
+	</head>
+	<body>
+		<div class="promote-page" id="index">
+			<div class="promote-header header bg-liner"><span>推广赚钱</span></div>
+			
+			<!--推广nav 开始-->
+			<div class="promote-nav flex">
+				<div class="promote-menu pmt-center bg-liner" data-ind='0'>
+					<text>推广中心</text>
+				</div>
+				<div class="promote-menu pmt-detail" data-ind='1'>
+					<text>推广明细</text>
+				</div>
+				<div class="promote-menu pmt-help"  data-ind='2'>
+					<text>推广帮助</text>
+				</div>
+			</div>
+			<!--推广nav 结束-->
+			
+			<div class="pmt-center-container pmt-body">
+				<!--推广floor1 开始-->
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text>0.00</text>
+						<text>累计奖金</text>
+					</div>
+					<div class="promote-floor">
+						<text>0.00</text>
+						<text>总推荐人数</text>
+					</div>
+				</div>
+				<!--推广floor1 结束-->
+				
+				
+				<!--推广floor2 开始-->
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text>0</text>
+						<text>激活数</text>
+					</div>
+					<div class="promote-floor">
+						<text>200元</text>
+						<text>游戏流水</text>
+					</div>
+					<div class="promote-floor">
+						<text>-500元</text>
+						<text>下级输赢</text>
+					</div>
+				</div>
+				<!--推广floor2 结束-->
+				
+				
+				<!--推广链接 开始-->
+				<div class="promote-link">
+					<div class="promote-link-title">
+						<div>我的推广链接 (<a href="#">教你推广？</a>)</div>
+					</div>
+					<div class="promote-link-inp">
+						<div class="word-ellipsis" id="target">http://www.abc123.com/a:333</div><button data-clipboard-action="copy" data-clipboard-target="#target" class="bg-liner copy-btn" id="copy_btn">复制</button>
+					</div>
+				</div>
+				<!--推广链接 结束-->
+				
+				<!--推广二维码 开始-->
+				<div class="promote-qrcode">
+					<div class="promote-qrcode-img"><img src="../img/qrcode.png" alt="" /></div>
+					<p>您的专属推广二维码</p>
+				</div>
+				<!--推广二维码 结束-->
+				
+				
+				<!--佣金奖励机制 开始-->
+				<div class="commission-reward">
+					<div>
+						<div class="commission-reward-title">佣金奖励机制</div>
+						<ul>
+							<li>激活：8元(通过邀请链接注册并游戏)</li>
+							<li>输赢的20%作为每天的结算佣金</li>
+						</ul>
+					</div>
+				</div>
+				<!--佣金奖励机制 结束-->
+			</div>
+			
+			
+			<!--推广明细-->
+			<div class="pmt-detail-container pmt-body">
+				<div class="pmt-detail-table">
+					<table>
+						<tr>
+							<th style="width: 30%;">用户名</th>
+							<th style="width: 40%;">注册日期</th>
+							<th style="width: 30%;">激活奖励</th>
+						</tr>
+						<tr>
+							<td>abc123</td>
+							<td>2018-01-08 23:12:30</td>
+							<td>+8</td>
+						</tr>
+						<tr>
+							<td>abc123</td>
+							<td>2018-01-08 23:12:30</td>
+							<td>+8</td>
+						</tr>
+						<tr>
+							<td>abc123 ddddddddddddddddddddddddddddd</td>
+							<td>2018-01-08 23:12:30</td>
+							<td>+8</td>
+						</tr>
+						<tr>
+							<td>abc123</td>
+							<td>2018-01-08 23:12:30</td>
+							<td>+8</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			
+			<!--推广明细-->
+			<div class="pmt-help-container pmt-body">
+				推广帮助
+			</div>
+			
+			<!--footer 开始-->
+			<div class="footer">
+				<div class="footer-item">
+					<a href="../index.html">
+						<img src="../img/ico_downtab_shouye_a.png" alt="" />
+						<text>首页</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="discount.html">
+						<img src="../img/ico_downtab_youhui_a.png" alt="" />
+						<text>优惠</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="gameLooby.html">
+						<img src="../img/ico_downtab_game_a.png" alt="" />
+						<text>游戏大厅</text>
+					</a>
+				</div>
+				<div class="footer-item active">
+					<a href="#">
+						<img src="../img/ico_downtab_tuiguang_b.png" alt="" />
+						<text>推广</text>
+					</a>
+				</div>
+				
+				<div class="footer-item" data-url='src/my.html'>
+					<a href="my.html">
+						<img src="../img/ico_downtab_wode_a.png" alt="" />
+						<text>我的</text>
+					</a>
+				</div>
+			</div>
+			<!--footer 结束-->
+		
+		</div>
+		<script type="text/javascript">
+ 			$(document).ready(function(){
+		        var targetText=$("#target").text();
+		        var clipboard = new Clipboard('#copy_btn');
+		 
+		        clipboard.on('success', function(e) {
+		            alert("复制成功");
+		            e.clearSelection();
+		        });
+		        
+		        
+		        //切换导航
+		        $(".promote-menu").click(function(){
+		        	var stus = $(this).attr("data-ind");
+		        	$(".promote-menu").removeClass('bg-liner');
+		        	$(this).addClass("bg-liner");
+		        	
+		        	if(stus == 0){
+		        		//推广中心
+//		        		alert(0)
+						$('.pmt-body').hide();
+		        		$(".pmt-center-container").show();
+		        	}else if(stus == 1){
+		        		//推广明细
+//		        		alert(1)
+						$('.pmt-body').hide();
+		        		$(".pmt-detail-container").show();
+		        	}else{
+		        		//推广帮助
+//		        		alert(2)
+						$('.pmt-body').hide();
+		        		$(".pmt-help-container").show();
+		        	}
+		        })
+		    });  
+		</script>
+	</body>
+	
+</html>
