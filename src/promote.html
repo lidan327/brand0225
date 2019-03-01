@@ -32,12 +32,12 @@
 				<!--推广floor1 开始-->
 				<div class="promote-floors flex">
 					<div class="promote-floor">
-						<text>0.00</text>
-						<text>累计奖金</text>
+						<text class="yellow">0.00</text>
+						<text class="gray">累计奖金</text>
 					</div>
 					<div class="promote-floor">
-						<text>0.00</text>
-						<text>总推荐人数</text>
+						<text class="yellow">0.00</text>
+						<text class="gray">总推荐人数</text>
 					</div>
 				</div>
 				<!--推广floor1 结束-->
@@ -46,16 +46,16 @@
 				<!--推广floor2 开始-->
 				<div class="promote-floors flex">
 					<div class="promote-floor">
-						<text>0</text>
-						<text>激活数</text>
+						<text class="yellow">0</text>
+						<text class="gray">激活数</text>
 					</div>
 					<div class="promote-floor">
-						<text>200元</text>
-						<text>游戏流水</text>
+						<text class="yellow">200元</text>
+						<text class="gray">游戏流水</text>
 					</div>
 					<div class="promote-floor">
-						<text>-500元</text>
-						<text>下级输赢</text>
+						<text class="yellow">-500元</text>
+						<text class="gray">下级输赢</text>
 					</div>
 				</div>
 				<!--推广floor2 结束-->
@@ -96,6 +96,29 @@
 			
 			<!--推广明细-->
 			<div class="pmt-detail-container pmt-body">
+				<div class="pmt-circle">
+					<div class="circle1">
+						<div id="echarts" style="width: 150px;height: 150px;"></div>
+					</div>
+					<div class="circle2">
+						<div id="echarts1" style="width: 150px;height: 150px;"></div>
+					</div>
+				</div>
+				
+					
+				<!--推广floor1 开始-->
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text class="gray">今日</text>
+						<text class="yellow">8</text>
+					</div>
+					<div class="promote-floor">
+						<text class="gray">昨日</text>
+						<text class="yellow">12</text>
+					</div>
+				</div>
+				<!--推广floor1 结束-->
+				
 				<div class="pmt-detail-table">
 					<table>
 						<tr>
@@ -170,6 +193,139 @@
 			<!--footer 结束-->
 		
 		</div>
+		<script src="../js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('echarts'));
+	        var myChart1 = echarts.init(document.getElementById('echarts1'));
+	            // 指定图表的配置项和数据
+	        var option = {
+	            title: {//标题组件
+	                text: '',
+	                left:'50px',//标题的位置 默认是left，其余还有center、right属性
+	                textStyle: {    
+	                color: "red",    
+	                fontSize: 15,   
+	                }
+	            },
+	            tooltip : { //提示框组件
+	                trigger: 'item', //触发类型(饼状图片就是用这个)
+	                formatter: "{a} <br/>{b} : {c} ({d}%)" //提示框浮层内容格式器
+	            },
+	            color:['#eaad0d','#f3bc2d'],  //手动设置每个图例的颜色
+	            legend: {  //图例组件
+	                //right:100,  //图例组件离右边的距离
+	                orient : 'horizontal',  //布局  纵向布局 图例标记居文字的左边 vertical则反之
+	                width:40,      //图行例组件的宽度,默认自适应
+	                x : 'right',   //图例显示在右边
+	                y: 'center',   //图例在垂直方向上面显示居中
+	                itemWidth:10,  //图例标记的图形宽度
+	                itemHeight:10, //图例标记的图形高度
+	                data:[],
+	                textStyle:{    //图例文字的样式
+	                    color:'#333',  //文字颜色
+	                    fontSize:12    //文字大小
+	                }
+	            },
+	            series : [ //系列列表
+	                {
+	                    name:'设备状态',  //系列名称
+	                    type:'pie',   //类型 pie表示饼图
+	                    center:['50%','50%'], //设置饼的原心坐标 不设置就会默认在中心的位置
+	                    radius : ['80%', '65%'],  //饼图的半径,第一项是内半径,第二项是外半径,内半径为0就是真的饼,不是环形
+	                    itemStyle : {  //图形样式
+	                        normal : { //normal 是图形在默认状态下的样式；emphasis 是图形在高亮状态下的样式，比如在鼠标悬浮或者图例联动高亮时。
+	                            label : {  //饼图图形上的文本标签
+	                                show : false  //平常不显示
+	                            },
+	                            labelLine : {     //标签的视觉引导线样式
+	                                show : false  //平常不显示
+	                            }
+	                        },
+	                        emphasis : {   //normal 是图形在默认状态下的样式；emphasis 是图形在高亮状态下的样式，比如在鼠标悬浮或者图例联动高亮时。
+	                            label : {  //饼图图形上的文本标签
+	                                show : true,
+	                                position : 'center',
+	                                textStyle : {
+	                                    fontSize : '10',
+	                                    fontWeight : 'bold'
+	                                }
+	                            }
+	                        }
+	                    },
+	                    data:[
+	                        {value:50, name:'正常'},
+	                        {value:50, name:'一般'}
+	                    ]
+	                }
+	            ]
+	        };
+	        
+	        
+	        // 指定图表的配置项和数据
+	        var option1 = {
+	            title: {//标题组件
+	                text: '',
+	                left:'50px',//标题的位置 默认是left，其余还有center、right属性
+	                textStyle: {    
+	                color: "red",    
+	                fontSize: 15,   
+	                }
+	            },
+	            tooltip : { //提示框组件
+	                trigger: 'item', //触发类型(饼状图片就是用这个)
+	                formatter: "{a} <br/>{b} : {c} ({d}%)" //提示框浮层内容格式器
+	            },
+	            color:['#949393','#a9a7a7'],  //手动设置每个图例的颜色
+	            legend: {  //图例组件
+	                //right:100,  //图例组件离右边的距离
+	                orient : 'horizontal',  //布局  纵向布局 图例标记居文字的左边 vertical则反之
+	                width:40,      //图行例组件的宽度,默认自适应
+	                x : 'right',   //图例显示在右边
+	                y: 'center',   //图例在垂直方向上面显示居中
+	                itemWidth:10,  //图例标记的图形宽度
+	                itemHeight:10, //图例标记的图形高度
+	                data:[],
+	                textStyle:{    //图例文字的样式
+	                    color:'#333',  //文字颜色
+	                    fontSize:12    //文字大小
+	                }
+	            },
+	            series : [ //系列列表
+	                {
+	                    name:'设备状态',  //系列名称
+	                    type:'pie',   //类型 pie表示饼图
+	                    center:['50%','50%'], //设置饼的原心坐标 不设置就会默认在中心的位置
+	                    radius : ['80%', '65%'],  //饼图的半径,第一项是内半径,第二项是外半径,内半径为0就是真的饼,不是环形
+	                    itemStyle : {  //图形样式
+	                        normal : { //normal 是图形在默认状态下的样式；emphasis 是图形在高亮状态下的样式，比如在鼠标悬浮或者图例联动高亮时。
+	                            label : {  //饼图图形上的文本标签
+	                                show : false  //平常不显示
+	                            },
+	                            labelLine : {     //标签的视觉引导线样式
+	                                show : false  //平常不显示
+	                            }
+	                        },
+	                        emphasis : {   //normal 是图形在默认状态下的样式；emphasis 是图形在高亮状态下的样式，比如在鼠标悬浮或者图例联动高亮时。
+	                            label : {  //饼图图形上的文本标签
+	                                show : true,
+	                                position : 'center',
+	                                textStyle : {
+	                                    fontSize : '10',
+	                                    fontWeight : 'bold'
+	                                }
+	                            }
+	                        }
+	                    },
+	                    data:[
+	                        {value:50, name:'正常'},
+	                        {value:50, name:'一般'}
+	                    ]
+	                }
+	            ]
+	        };
+	        
+	        
+	    </script> 
 		<script type="text/javascript">
  			$(document).ready(function(){
 		        var targetText=$("#target").text();
@@ -195,6 +351,8 @@
 		        	}else if(stus == 1){
 		        		//推广明细
 //		        		alert(1)
+				        myChart.setOption(option);
+				        myChart1.setOption(option1);
 						$('.pmt-body').hide();
 		        		$(".pmt-detail-container").show();
 		        	}else{
