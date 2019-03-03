@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<title>我的下级用户</title>
+		<style type="text/css">
+			/*account-page*/
+			.bindingBank-page{
+				height: 100%;
+				background: #F5F5F5;
+			}
+			/*header 开始*/
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
+			}
+			/*header 结束*/
+			/*激活状态floor 开始*/	
+			.myJuniorUsers-activate{
+				height: 9.75rem;
+				background: #FFFFFF;
+				display: flex;
+				border-bottom: 1px solid #F5F5F5; 
+			}
+			.myJuniorUsers-activate>div{
+				height: 6.25rem;
+			    display: flex;
+			    justify-content: center;
+			    align-items: Center;
+			}
+			.myJuniorUsers-activate>div>div{
+				position: absolute;
+			}
+			.myJuniorUsers-activate>div>div>span:first-child{
+				color:#333333;
+			}
+			.myJuniorUsers-activate>div>div>span:last-child{
+				color:#EA4811;
+			}
+			.myJuniorUsers-activate>div span{
+				font-size: 1.5rem;
+				display: block;
+			}
+			.myJuniorUsers-activate>div,.myJuniorUsers-date>div{
+				flex: 1;
+				margin: auto;
+				text-align: center;
+			}
+			.myJuniorUsers-activate img{
+				height: 6.25rem;
+			}
+			.myJuniorUsers-date{
+				height: 4.625rem;
+				display: flex;
+				background: #FFFFFF;
+			}
+			.myJuniorUsers-date>div>span{
+				display: block;
+				font-size: 1.5rem;
+			}
+			.myJuniorUsers-date>div>span:first-child{
+				color: #666666;
+			}
+			.myJuniorUsers-date>div>span:last-child{
+				color: #EA4811;
+			}
+			.myJuniorUsers-date>span{
+				border-left: 1px solid #F5F5F5;
+				margin: 1.0625rem 0;
+			}
+			/*激活状态floor 结束*/
+			/*line*/
+			.limitTansform-body-row-line{
+				height: 0.5rem;
+				background: #F5F5F5;
+			}
+			/*line*/
+			/*推荐明细 开始*/
+			.myJuniorUsers-info{
+				height: auto;
+				background: #FFFFFF;
+			}
+			.myJuniorUsers-info-title{
+				height: 2.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #333333;
+			}
+			.myJuniorUsers-info-table{
+			}
+			.myJuniorUsers-info-table>table{
+				width: 100%;
+			}
+			.myJuniorUsers-info-table>table tr{
+				display: flex;
+				height: 2.5rem;
+			}
+			.myJuniorUsers-info-table>table th,.myJuniorUsers-info-table>table td{
+				flex: 1;
+				text-align: center;
+				margin: auto;
+			}
+			.myJuniorUsers-info-table>table>tbody tr:nth-child(even){
+				background: #f9f5f5;
+			}
+			/*推荐明细 结束*/
+			/*footer 开始*/
+			.tansformRecord-footer{
+				height: 6.5rem;
+				display: flex;
+				padding: 0 15%;
+				background: #F5F5F5;
+			}
+			.tansformRecord-footer>span{
+				height: 2.5rem;
+				width: 50%;
+				border: 1px solid #cccccc;
+				color: #666666;
+				border-radius: 10rem;
+				margin: auto;
+				text-align: center;
+    			line-height: 2.5rem;
+    			font-size: 1.125rem;
+			}
+			.tansformRecord-footer>span>img{
+				width: 1.5rem;
+				vertical-align: middle;
+				margin-right: .5rem;
+			}
+			/*footer 结束*/
+			
+		</style>
+	</head>
+	<body>
+		<div class="bindingBank-page">
+			<!--header 开始-->
+			<div class="hostBg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>我的下级用户</div>
+					<div></div>
+				</div>
+			</div>
+			<!--header 结束-->
+			<!--激活状态floor 开始 -->
+			<div class="myJuniorUsers-quantityBody">
+				<div class="myJuniorUsers-activate">
+					<div>
+						<img src="../img/xjyh-circle-1.png"/>
+						<div>
+							<span>已激活</span><span>290</span>
+						</div>
+					</div>
+					<div>
+						<img src="../img/xjyh-circle-2.png"/>
+						<div>
+							<span>未激活</span><span>2</span>
+						</div>
+					</div>
+				</div>
+				<div class="myJuniorUsers-date">
+					<div>
+						<span>今日</span>
+						<span>8</span>
+					</div>
+					<span></span>
+					<div>
+						<span>昨日</span>
+						<span>12</span>
+					</div>
+				</div>
+			</div>
+			<!--激活状态floor 结束 -->
+			<div class="limitTansform-body-row-line"></div>
+			<!--推荐明细 floor 开始-->
+			<div class="myJuniorUsers-info">
+				<div class="myJuniorUsers-info-title">
+					<span>-推荐明细-</span>
+				</div>
+				<div class="myJuniorUsers-info-table">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>用户名</th>
+							<th>注册时间</th>
+							<th>状态</th>
+						</tr>
+						<tr>
+							<td>zhan11</td>
+							<td>1-21</td>
+							<td>已激活</td>
+						</tr>
+						<tr>
+							<td>lidan</td>
+							<td>1-21</td>
+							<td>未激活</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--推荐明细 floor 结束-->
+			<!--footer 开始-->
+			<div class="tansformRecord-footer">
+					<span><img src="../img/arrow-dwon.png"/>点击加载更多</span>
+			</div>
+			<!--footer 结束-->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<title>账户设置</title>
+		<style type="text/css">
+			/*account-page*/
+			.account-page{
+				height: 100%;
+				background: #F5F5F5;
+			}
+			/*header 开始*/
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
+			}
+			/*header 结束*/
+			/*body 开始*/	
+			.account-body-header{
+				height: 5rem;
+				line-height: 5rem;
+				padding-left: 1.25rem;
+				font-size: 1.75rem;
+				background: #F5F5F5;
+				color: #666;
+			}
+			.account-body-row{
+				height: 6.25rem;
+				line-height: 6.25rem;
+				border-bottom: 1px solid ##F5F5F5;
+				display: flex;
+				font-size: 1.75rem;
+				background: #FFFFFF;
+			}
+			.account-body-row>div:nth-child(1){
+				flex: 55%;
+			}
+			.account-body-row>div:nth-child(1){
+				flex: 45%;
+			}
+			.body-row-img{
+				float: left;
+			}
+			.body-row-account{
+				color: #666;
+			}
+			.body-row-img img{
+				height: 2.75rem;
+				width: 2.75rem;
+				vertical-align: middle;
+				padding-left: 1.25rem;
+				padding-right: 1.25rem;
+			}
+			.body-row-name{
+				text-align: right;
+				padding-right: 1.25rem;
+			}
+			.body-row-name>img{
+				vertical-align: middle;
+				padding-left: 0.5rem;
+			}
+			/*body 结束*/
+			/*footer 开始*/
+			.account-footer{
+				height: 15.5rem;
+				display: flex;
+				padding: 0 15%;
+				background: #F5F5F5;
+			}
+			.account-footer>span{
+				height: 5.5rem;
+				width: 100%;
+				background: #EA4811;
+				border-radius: 10rem;
+				margin: auto;
+				text-align: center;
+    			line-height: 5.5rem;
+    			color: #FFFFFF;
+    			font-size: 2.125rem;
+			}
+			/*footer 结束*/
+			
+		</style>
+	</head>
+	<body>
+		<div class="account-page">
+			<!--header 开始-->
+			<div class="hostBg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>账户设置</div>
+					<div></div>
+				</div>
+			</div>
+			<!--header 结束-->
+			<!--body 开始 -->
+			<div class="account-body">
+				<div class="account-body-header">
+					<div>会员信息</div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-huiyuan.png"/>
+						<span class="body-row-account">会员账户：</span>
+					</div>
+					<div class="body-row-name"><span>zhangsan123</span></div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-xm.png"/>
+						<span class="body-row-account">真实姓名：</span>
+					</div>
+					<div class="body-row-name"><span>张三</span></div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-wx.png"/>
+						<span class="body-row-account">微信：</span>
+					</div>
+					<div class="body-row-name"><span>san12312</span></div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-qq.png"/>
+						<span class="body-row-account">QQ：</span>
+					</div>
+					<div class="body-row-name"><span>2324234234</span></div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-sj.png"/>
+						<span class="body-row-account">手机号：</span>
+					</div>
+					<div class="body-row-name"><span>12334455545</span></div>
+				</div>
+				<div class="account-body-header">
+					<div>账户安全设置</div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-code1.png"/>
+						<span class="body-row-account">登录密码：</span>
+					</div>
+					<div class="body-row-name"><span>12334455545</span></div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-code2.png"/>
+						<span class="body-row-account">提款密码：</span>
+					</div>
+					<div class="body-row-name">
+						<span>未设置</span>
+						<img src="../img/arrow-right.png"/>
+					</div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-yhk.png"/>
+						<span class="body-row-account">我的银行卡：</span>
+					</div>
+					<div class="body-row-name">
+						<span>未绑定</span>
+						<img src="../img/arrow-right.png"/>
+					</div>
+				</div>
+				<div class="account-body-header">
+					<div>其他</div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-gy.png"/>
+						<span class="body-row-account">关于我们：</span>
+					</div>
+					<div class="body-row-name">
+						<img src="../img/arrow-right.png"/>
+					</div>
+				</div>
+				<div class="account-body-row">
+					<div class="body-row-img">
+						<img src="../img/zh-ico-gg.png"/>
+						<span class="body-row-account">系统公告：</span>
+					</div>
+					<div class="body-row-name">
+						<img src="../img/arrow-right.png"/>
+					</div>
+				</div>
+				<div class="account-footer">
+					<span>退出</span>
+				</div>
+			</div>
+			<!--body 结束 -->
+		</div>
+	</body>
+</html>

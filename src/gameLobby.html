@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<title>游戏大厅</title>
+		<style type="text/css">
+			a{
+				text-decoration: none;
+				outline: none;
+				color: #ffffff;
+			}
+			/*account-page*/
+			.bindingBank-page{
+				height: 100%;
+				background: #F5F5F5;
+			}
+			.tansformHistory{
+				text-align: right !important;
+				margin-right: 1.125rem;
+				font-size: 1.75rem;
+			}
+			/*header 开始*/
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
+			}
+			/*header 结束*/
+			/*body 开始*/
+			.gameLobby-body{
+				display: flex;
+				height: 100%;
+			}
+			.gameLobby-body>div{
+				flex: 1;
+			}
+			.gameLobby-content{
+				background: #FFFFFF;
+			}
+			.gameLobby-content-row{
+				height: 3.125rem;
+				display: flex;
+				line-height: 3.125rem;
+				border-bottom: 1px solid #F5F5F5;
+				font-size: 0.875rem;
+			}
+			.gameLobby-content .active>span{
+				color: #EA4811;
+			}
+			.gameLobby-content-row>span{
+				flex: 1;
+				margin-left: 1.125rem;
+				
+			}
+			.gameLobby-content-row>span:last-child{
+				text-align: right;
+				flex: 1;
+				margin-right: 1.125rem;
+			}
+			/*gameLobby-img 开始*/
+			.gameLobby-img{
+				margin-top: 0.9375rem;
+				text-align: center;
+			}
+			.gameLobby-img>img{
+				height: 8.25rem;
+				width: 12.8125rem;
+			}
+			/*body 结束*/
+		</style>
+	</head>
+	<body>
+		<div class="bindingBank-page">
+			<!--header 开始-->
+			<div class="hostBg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"></div>
+					<div>游戏大厅</div>
+					<div class="tansformHistory"><a href="limitTansform.html">额度转换</a></div>
+				</div>
+			</div>
+			<!--header 结束-->
+			<!--body 开始-->
+			<div class="gameLobby-body">
+				<div class="gameLobby-content">
+					<div class="gameLobby-content-row active">
+						<span>天天棋牌</span>
+						<span>8989.89</span>
+					</div>
+					<div class="gameLobby-content-row">
+						<span>元初棋牌</span>
+						<span>8989.89</span>
+					</div>
+					<div class="gameLobby-content-row">
+						<span>BN棋牌</span>
+						<span>8989.89</span>
+					</div>
+					<div class="gameLobby-content-row">
+						<span>AJ棋牌</span>
+						<span>8989.89</span>
+					</div>
+				</div>
+				<div>
+					<div class="gameLobby-img">
+						<img src="../img/yxdt-pic-1.png"/>
+					</div>
+					<div class="gameLobby-img">
+						<img src="../img/yxdt-pic-2.png"/>
+					</div>
+					<div class="gameLobby-img">
+						<img src="../img/yxdt-pic-3.png"/>
+					</div>
+					<div class="gameLobby-img">
+						<img src="../img/yxdt-pic-2.png"/>
+					</div>
+					<div class="gameLobby-img">
+						<img src="../img/yxdt-pic-3.png"/>
+					</div>
+				</div>
+			</div>
+			<!--body 结束-->
+			<!--footer 开始-->
+			<div class="footer">
+				<div class="footer-item">
+					<a href="../index.html">
+						<img src="../img/ico_downtab_shouye_a.png" alt="" />
+						<text>首页</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="discount.html">
+						<img src="../img/ico_downtab_youhui_a.png" alt="" />
+						<text>优惠</text>
+					</a>
+				</div>
+				<div class="footer-item active">
+					<a href="gameLobby.html">
+						<img src="../img/ico_downtab_game_b.png" alt="" />
+						<text>游戏大厅</text>
+					</a>
+				</div>
+				<div class="footer-item">
+					<a href="promote.html">
+						<img src="../img/ico_downtab_tuiguang_a.png" alt="" />
+						<text>推广</text>
+					</a>
+				</div>
+				
+				<div class="footer-item" data-url='src/my.html'>
+					<a href="#">
+						<img src="../img/ico_downtab_wode_a.png" alt="" />
+						<text>我的</text>
+					</a>
+				</div>
+			</div>
+			<!--footer 结束-->
+		</div>
+	</body>
+</html>

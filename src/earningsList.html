@@ -11,71 +11,141 @@
 		<!--<script src="js/jquery.mobile-1.4.5.js"></script>-->
 		<style>
 			/*header 开始*/
-			.earnings-header{
-				display: flex;
-			}
-			.earnings-header>div{
-				flex: 1;
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
 			}
 			/*header 结束*/
+			/*floor0 开始*/
+			.earnings-header-balance{
+				height: 10.4375rem;
+			}
+			.earnings-balance{
+				height: 3rem;
+				display: flex;
+				justify-content: center;
+				color: #FFFFFF;
+				line-height: 1.75rem;
+			}
+			.earnings-balance:nth-child(1){
+				font-size: 0.7825rem;
+			}
+			.earnings-balance:nth-child(2){
+				font-size: 3.125rem;
+			}
+			.earnings-balance:nth-child(3)>div{
+				width: 6.375rem;
+				height: 2.75rem;
+				background: #FFFFFF;
+				border-radius: 1.5rem;
+				color: #ea4811;
+				text-align: center;
+				line-height: 2.75rem;
+			}
+			.earnings-balance:nth-child(3) img{
+				height: 1.25rem;
+				vertical-align: middle;
+				margin-bottom:1px;
+			}
+			/*floor0 开始*/
+			/*title 标题 开始*/
+			.earnings-title{
+				background: #FFFFFF;
+				display: flex;
+				font-size: 1.75rem;
+				justify-content: center;
+			}
+			.earnings-title>span{
+				line-height: 1.5rem;
+				padding-top:0.9375rem ;
+			}
+			/*title 标题 结束*/
+			/*floor 开始*/
+			.earnings-wrap .promote-floor>text:first-child{
+				color: #EA4811;
+			}
+			/*floor 结束*/
+			
 		</style>
 	</head>
 	<body>
 		<div class="promote-page" id="index">
-			<div class="promote-header header bg-liner">
-				<div class="earnings-header">
-					<div class="login-return"><img src="../img/arrow-left.png"/><text>返回</text></div>
-					<div>收益报表</div>
-					<div></div>
+			<div class="earnings-wrap">
+				<div class="promote-header  hostBg-liner">
+					<div class="earnings-header">
+						<div class="login-header-title flex header">
+							<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+							<div>收益报表</div>
+							<div></div>
+						</div>
+					</div>
+					<!--账户金额floor0 开始-->
+					<div class="earnings-header-balance">
+						<div class="earnings-balance">
+							<span>主账户余额  (元)</span>
+						</div>
+						<div class="earnings-balance">
+							<span>2988.50</span>
+						</div>
+						<div class="earnings-balance">
+							<div><span>去提现 </span><img src="../img/ico-arrow-y.png" alt="" /></div>
+						</div>
+					</div>
+					<!--账户金额floor0 结束-->
 				</div>
-
+				<!--推广floor1 开始-->
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text>0.00</text>
+						<text>本月累计奖金</text>
+					</div>
+					<div class="promote-floor">
+						<text>0.00</text>
+						<text>上月累计奖金</text>
+					</div>
+				</div>
+				<!--推广floor1 结束-->
+				
+				<!--推广floor2 开始-->
+				<div class="earnings-title">
+					<span>— 今日 —</span>
+				</div>
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text>5000.00</text>
+						<text>下级充值流水</text>
+					</div>
+					<div class="promote-floor">
+						<text>53000.00</text>
+						<text>下级游戏流水</text>
+					</div>
+					<div class="promote-floor">
+						<text>980.50</text>
+						<text>预估奖金</text>
+					</div>
+				</div>
+				<!--推广floor2 结束-->
+				
+				<!--推广floor3 开始-->
+				<div class="earnings-title">
+					<span>— 昨日 —</span>
+				</div>
+				<div class="promote-floors flex">
+					<div class="promote-floor">
+						<text>5000.00</text>
+						<text>下级充值流水</text>
+					</div>
+					<div class="promote-floor">
+						<text>53000.00</text>
+						<text>下级游戏流水</text>
+					</div>
+					<div class="promote-floor">
+						<text>980.50</text>
+						<text>获得奖金</text>
+					</div>
+				</div>
+				<!--推广floor3 结束-->
 			</div>
-			<!--推广floor1 开始-->
-			<div class="promote-floors flex">
-				<div class="promote-floor">
-					<text>0.00</text>
-					<text>本月累计奖金</text>
-				</div>
-				<div class="promote-floor">
-					<text>0.00</text>
-					<text>上月累计奖金</text>
-				</div>
-			</div>
-			<!--推广floor1 结束-->
-			
-			<!--推广floor2 开始-->
-			<div class="promote-floors flex">
-				<div class="promote-floor">
-					<text>5000.00</text>
-					<text>下级充值流水</text>
-				</div>
-				<div class="promote-floor">
-					<text>53000.00</text>
-					<text>下级游戏流水</text>
-				</div>
-				<div class="promote-floor">
-					<text>980.50</text>
-					<text>预估奖金</text>
-				</div>
-			</div>
-			<!--推广floor2 结束-->
-			
-			<!--推广floor3 开始-->
-			<div class="promote-floors flex">
-				<div class="promote-floor">
-					<text>5000.00</text>
-					<text>下级充值流水</text>
-				</div>
-				<div class="promote-floor">
-					<text>53000.00</text>
-					<text>下级游戏流水</text>
-				</div>
-				<div class="promote-floor">
-					<text>980.50</text>
-					<text>预估奖金</text>
-				</div>
-			</div>
-			<!--推广floor3 结束-->
 		</div>
 		<script type="text/javascript">
  			$(document).ready(function(){

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<title>设置提现密码</title>
+		<style type="text/css">
+			/*外层*/
+			.passWord-page{
+				height: 100%;
+				background: #F5F5F5;
+			}
+			/*header 开始*/
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
+			}
+			/*header 结束*/
+			/*body 开始*/
+			.passWord-body-row{
+				height: 6.25rem;
+				line-height: 6.25rem;
+				border-bottom: 1px solid #F5F5F5;
+				display: flex;
+				font-size: 1.75rem;
+				background: #FFFFFF;
+			}
+			.passWord-body-row>div{
+				flex:1;
+			}
+			.passWord-body-row>div:first-child{
+				margin-left: 1.125rem;
+			}
+			.body-row-name{
+				text-align: right;
+				padding-right: 1.25rem;
+				color: #666;
+			}
+			.body-row-img>span{
+				color: #333333;
+			}
+           .body-row-name>input{
+				border: none;
+				text-align: right;
+			}
+			/*body 结束*/
+            /*footer 开始*/
+			.account-footer{
+				height: 15.5rem;
+				display: flex;
+				padding: 0 15%;
+				background: #F5F5F5;
+			}
+			.account-footer>span{
+				height: 5.5rem;
+				width: 100%;
+				background: #EA4811;
+				border-radius: 10rem;
+				margin: auto;
+				text-align: center;
+    			line-height: 5.5rem;
+    			color: #FFFFFF;
+    			font-size: 2.125rem;
+			}
+			/*footer 结束*/
+		</style>
+	</head>
+	<body>
+		<div class="passWord-page">
+			<div class="hostBg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>请输入手机号码</div>
+					<div></div>
+				</div>
+				<div class="passWord-body-row">
+					<div>
+						<span>手机号码：</span>
+					</div>
+					<div class="body-row-name">
+						<input type="text" placeholder="请输入手机号码"/>
+					</div>
+				</div>
+			<div class="account-footer">
+				<span>完成</span>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	})
+</script>
