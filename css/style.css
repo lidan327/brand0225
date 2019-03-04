@@ -39,7 +39,14 @@ html,body{
 .index-header>span:first-child{
 	margin-left: 1.25rem;
 }
-
+.header-right{
+	text-align: right !important;
+}
+.header-right>a{
+	text-decoration: none;
+	color: #fff;
+	padding-right: 1.25rem;
+}
 .index-header>span:last-child{
 	text-align: right;
 	margin-right: 1.25rem;
@@ -76,20 +83,27 @@ html,body{
 	/*margin-top: 3.5rem;*/
 	margin-top: 28px;
 }
-.index-nav>div{
+.index-nav>a{
 	flex: 1;
+	text-decoration: none;
+}
+.index-nav>a>div{
 	text-align: center;
 }
-.index-nav>div img{
+.index-nav>a>div img{
 	width: 5rem;
 	height: 5rem;
 }
-.index-nav>div text{
+.index-nav>a>div text{
 	color: #333;
 	font-size: 1.5rem;
 	display: block;
 	text-align: center;
 	margin-top: 10px;
+}
+.index-nav>a>div text a{
+	color: #333;
+	text-decoration: none;
 }
 /*首页导航 end*/
 
@@ -880,5 +894,96 @@ img{ pointer-events: none; }
 	line-height: 50px;
 	border-bottom: 1px solid #eee;
 	font-size: 1.75rem;
+	clear: both;
 }
+.charge-items{
+	display: flex;
+	align-items: center;
+}
+.charge-cell .charge-money-item{
+	flex: 1;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid #eaeaea;
+	border-radius: 1.875rem;
+	margin: 0 0.625rem; 
+	
+}
+.charge-cell .charge-money-item:first-child{
+	margin-left:1.25rem; 
+	
+}
+.charge-cell .charge-money-item:last-child{
+	margin-right:1.25rem; 
+	
+}
+.charge-item-active{
+	border: 1px solid #fd8686!important;
+	background: #ffe2e1;
+}
+.bank-transfer img,.alipay-transfer img{
+	height: 22px;
+	width: 22px;
+	vertical-align: middle;
+}
+.bank-transfer img,.alipay-transfer img{
+	height: 12px;
+	width: 12px;
+	margin-left: 4px;
+}
+.bank-transfer text,.alipay-transfer text{
+	margin-left: 4px;
+	vertical-align: middle;
+}
+.bank-transfer a{
+	text-decoration: none;
+	color: #333;
+}
+.alipay-transfer a{
+	text-decoration: none;
+	color: #666;
+}
+.charge-tips{
+	padding: 10px 1.25rem;
+	color: #e86a6a;
+	font-size: 1.375rem;
+}
+
+/*选择银行弹框开始*/
+.bank-model{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+}
+.bank-model-box{
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: #fff;
+}
+.bank-model-box h1{
+	text-align: center;
+	font-size: 2.125rem;
+	color: #333;
+	padding: 0 1.25rem;
+}
+.bank-model-box h1>text{
+	float: left;
+}
+.bank-model-list{
+	padding: 0 1.25rem;
+}
+.bank-model-cell{
+	height: 50px;
+	line-height: 50px;
+}
+/*选择银行弹框结束*/
+
 /*在线充值页面 结束*/

@@ -12,11 +12,12 @@
 	</head>
 	<body>
 		<div class="charge-page">
+			
 			<div class="charge-header bg-liner">
 				<div class="login-header-title flex header">
-					<div class="login-return"><img src="../img/arrow-left.png"/><text>返回</text></div>
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
 					<div>在线充值</div>
-					<div><text>充值记录</text></div>
+					<div class="header-right"><a href=""><text>充值记录</text></a></div>
 				</div>
 			</div>
 			
@@ -39,15 +40,93 @@
 					</div>
 				</div>
 				
-				<div class="charge-cell">
+				<div class="charge-cell charge-items">
 					<span class="charge-money-item">50元</span>
-					<span class="charge-money-item">100元</span>
+					<span class="charge-money-item charge-item-active">100元</span>
 					<span class="charge-money-item">150元</span>
 					<span class="charge-money-item">200元</span>
+				</div>
+				
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">请选择充值方式：</span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">银行转账：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left bank-transfer">
+							<a href="#"><img src="../img/yh-jianshe.png" alt="" /><text>中国建设银行</text><img src="../img/arrow-right.png"/></a>
+						</span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">支付宝：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left alipay-transfer"><a href=""><text>请选择支付通道</text><img src="../img/arrow-right.png"/></a></span>
+					</div>
+				</div>
+				
+				<div class="charge-tips">
+					<p>温馨提示：</p>
+					<p>您充值过程中留意底部的支付说明，避免操作,导致款项的延误。</p>
+				</div>
+				
+			</div>
+			
+			<div class="bank-model">
+				<div class="bank-model-box">
+					<h1><text><</text> 选择银行</h1>
+					<div class="bank-model-list">
+						<div class="bank-model-cell">
+							<div class="pull-left">
+								<img src="../img/yh-jianshe.png"/>
+							</div>
+							<div class="pull-right">
+								<p>中国建设银行</p>
+								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						<div class="bank-model-cell">
+							<div class="pull-left">
+								<img src="../img/yh-jianshe.png"/>
+							</div>
+							<div class="pull-right">
+								<p>中国建设银行</p>
+								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						<div class="bank-model-cell">
+							<div class="pull-left">
+								<img src="../img/yh-jianshe.png"/>
+							</div>
+							<div class="pull-right">
+								<p>中国建设银行</p>
+								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			
 		</div>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				//
+				$(".bank-transfer").click(function(){
+					alert(1)
+				})
+			})
+		</script>
 	</body>
 	
 </html>
