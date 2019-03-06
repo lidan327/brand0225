@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<!--<script src="js/jquery.mobile-1.4.5.js"></script>-->
+	</head>
+	<body>
+		<div class="charge-page">
+			
+			<div class="charge-header bg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>银行卡转账入款</div>
+					<div class="header-right"></div>
+				</div>
+			</div>
+			
+			<div class="charge-container">
+				<div class='bank-charge-title'>
+					<h1>填写转账资料</h1>
+					<p>选择银行已完成！以下是您欲转账到该银行卡的账户资料</p>
+				</div>
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">订单号：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left">3028756563276</span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">银行名称：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left">交通银行</span>
+					</div>
+				</div>
+				
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">收款人：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left">张大法 <span class="copy-btn">复制</span></span>
+					</div>
+				</div>
+				
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">银行账号：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left">627381736273827 <span class="copy-btn">复制</span></span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">开户行：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left">北京市五棵松支行 <span class="copy-btn">复制</span></span>
+					</div>
+				</div>
+				
+				<div class='gray-block'></div>
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">存款人姓名：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left"><input type="text" placeholder="请输入姓名" /></span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">存入金额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left"><input type="text" placeholder="请输入金额" value="100" /></span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">存入方式：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left"><text>支付宝转账</text><img src="../img/arrow-right.png"/></span>
+					</div>
+				</div>
+				
+				<div class="step1">
+					<span><button>上一步</button></span>
+					<span><button class="bg-liner">下一步</button></span>
+				</div>
+				
+				<div class="charge-tips">
+					<p>温馨提示：</p>
+					<p>1、请您如实填写存款人姓名，金额,每笔转账仅提交一次。</p>
+					<p>2、转账金额可用再次修改，比如添加零头,如：100.32 便于财务查收 ，加快到账速度。</p>
+					<p>3、转账完成后请保留单据作为核对凭证。</p>
+				</div>
+				
+			</div>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				//
+				
+				$(document).click(function(){
+					$(".bank-model").hide()
+				})
+				
+				$(".bank-transfer").click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					$(".bank-model").show()
+				})
+				
+				$('.bank-model-list').click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+				})
+			})
+		</script>
+	</body>
+	
+</html>
