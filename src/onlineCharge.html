@@ -83,33 +83,45 @@
 			
 			<div class="bank-model">
 				<div class="bank-model-box">
-					<h1><text><</text> 选择银行</h1>
+					<h1><text class="close-bankmodel"><</text> 选择银行</h1>
 					<div class="bank-model-list">
 						<div class="bank-model-cell">
-							<div class="pull-left">
+							<div class="bank-left">
 								<img src="../img/yh-jianshe.png"/>
 							</div>
-							<div class="pull-right">
-								<p>中国建设银行</p>
-								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							<div class="bank-right">
+								<p class='bankname'>中国建设银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
 							</div>
 						</div>
+						
 						<div class="bank-model-cell">
-							<div class="pull-left">
-								<img src="../img/yh-jianshe.png"/>
+							<div class="bank-left">
+								<img src="../img/yh-jiaotong.png"/>
 							</div>
-							<div class="pull-right">
-								<p>中国建设银行</p>
-								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							<div class="bank-right">
+								<p class='bankname'>中国交通银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
 							</div>
 						</div>
-						<div class="bank-model-cell">
-							<div class="pull-left">
-								<img src="../img/yh-jianshe.png"/>
+						
+						<div class="bank-model-cell disabled-cell">
+							<div class="bank-left">
+								<img src="../img/yh-zhongguo.png"/>
 							</div>
-							<div class="pull-right">
-								<p>中国建设银行</p>
-								<p>¥ 10-3000（转账成功后，再提交入款信息）</p>
+							<div class="bank-right">
+								<p class='bankname'>中国银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						
+						<div class="bank-model-cell  disabled-cell">
+							<div class="bank-left">
+								<img src="../img/yh-zhongguo.png"/>
+							</div>
+							<div class="bank-right">
+								<p class='bankname'>平安银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
 							</div>
 						</div>
 					</div>
@@ -122,8 +134,20 @@
 			
 			$(function(){
 				//
-				$(".bank-transfer").click(function(){
-					alert(1)
+				
+				$(document).click(function(){
+					$(".bank-model").hide()
+				})
+				
+				$(".bank-transfer").click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					$(".bank-model").show()
+				})
+				
+				$('.bank-model-list').click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
 				})
 			})
 		</script>
