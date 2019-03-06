@@ -33,39 +33,46 @@
 			.earnings-balance:nth-child(2){
 				font-size: 3.125rem;
 			}
-			.earnings-balance:nth-child(3)>div{
-				width: 6.375rem;
-				height: 2.75rem;
-				background: #FFFFFF;
-				border-radius: 1.5rem;
-				color: #ea4811;
-				text-align: center;
-				line-height: 2.75rem;
-			}
-			.earnings-balance:nth-child(3) img{
-				height: 1.25rem;
-				vertical-align: middle;
-				margin-bottom:2px;
-			}
 			/*floor0 开始*/
-			/*title 标题 开始*/
-			.earnings-title{
-				background: #FFFFFF;
-				display: flex;
-				font-size: 1.75rem;
-				justify-content: center;
-			}
-			.earnings-title>span{
-				line-height: 1.5rem;
-				padding-top:0.9375rem ;
-			}
-			/*title 标题 结束*/
 			/*floor 开始*/
 			.earnings-wrap .promote-floor>text:first-child{
 				color: #EA4811;
 			}
 			/*floor 结束*/
-			
+			/*eacharts 开始*/
+			.balance-eacharts{
+				background: #FFFFFF;
+			}
+			.balance-floor{
+				height: 15rem;
+				background: #FFFFFF;
+				padding:  0 1.125rem;
+				font-size: 1.5rem;
+				color: #333333;
+			}
+			.balance-floor>span{
+				display: block;
+				line-height: 2rem;
+			}
+			.balance-btn{
+				margin-top: 3.125rem;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+			}
+			.balance-btn>p{
+				height: 2.75rem;
+				line-height: 2.75rem;
+				width: 9rem;
+				font-size: 1.125rem;
+				color: #333333;
+				background: #FFFFFF;
+				border: 1px solid #EA4811;
+				border-radius: 2rem;
+			}
+			.balance-btn>p:first-child{
+				margin-right: 2rem;
+			}
 		</style>
 	</head>
 	<body>
@@ -75,8 +82,8 @@
 					<div class="earnings-header">
 						<div class="login-header-title flex header">
 							<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
-							<div>收益报表</div>
-							<div></div>
+							<div>余额宝</div>
+							<div>收益记录</div>
 						</div>
 					</div>
 					<!--账户金额floor0 开始-->
@@ -88,67 +95,79 @@
 							<span>2988.50</span>
 						</div>
 						<div class="earnings-balance">
-							<div><span>去提现 </span><img src="../img/ico-arrow-y.png" alt="" /></div>
+							<div><span>去提现 </span></div>
 						</div>
 					</div>
 					<!--账户金额floor0 结束-->
 				</div>
-				<!--推广floor1 开始-->
-				<div class="promote-floors flex">
-					<div class="promote-floor">
-						<text>0.00</text>
-						<text>本月累计奖金</text>
-					</div>
-					<div class="promote-floor">
-						<text>0.00</text>
-						<text>上月累计奖金</text>
-					</div>
-				</div>
-				<!--推广floor1 结束-->
-				
 				<!--推广floor2 开始-->
-				<div class="earnings-title">
-					<span>— 今日 —</span>
-				</div>
 				<div class="promote-floors flex">
 					<div class="promote-floor">
 						<text>5000.00</text>
-						<text>下级充值流水</text>
+						<text>累计收益 (元)</text>
 					</div>
 					<div class="promote-floor">
 						<text>53000.00</text>
-						<text>下级游戏流水</text>
+						<text>基准收益率 （%）</text>
 					</div>
 					<div class="promote-floor">
-						<text>980.50</text>
-						<text>预估奖金</text>
+						<text style="color: #5cd655;">-20.012</text>
+						<text>浮动基点</text>
 					</div>
 				</div>
 				<!--推广floor2 结束-->
-				
-				<!--推广floor3 开始-->
-				<div class="earnings-title">
-					<span>— 昨日 —</span>
-				</div>
-				<div class="promote-floors flex">
-					<div class="promote-floor">
-						<text>5000.00</text>
-						<text>下级充值流水</text>
-					</div>
-					<div class="promote-floor">
-						<text>53000.00</text>
-						<text>下级游戏流水</text>
-					</div>
-					<div class="promote-floor">
-						<text>980.50</text>
-						<text>获得奖金</text>
+				<!--eacharts折线图 开始-->
+				<div class="balance-eacharts" style="height: 24rem;">
+					<div id="">
+						<div id="echarts" style="width: 100%;height: 24rem; padding: 0 1rem;"></div>
 					</div>
 				</div>
-				<!--推广floor3 结束-->
+				<!--eacharts折线图 结束-->
+				<div class="balance-floor">
+					<span>收益计算公式</span>
+					<span>收益=昨日余额宝余额 * (基准收益率+浮动基点)</span>
+					<a href="#">详细说明></a>
+					<div class="balance-btn">
+						<p>转入</p>
+						<p>转出</p>
+					</div>
+				</div>
 			</div>
+			
 		</div>
+		<script src="../js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('echarts'));
+			option = {
+			    xAxis: {
+			        type: 'category',
+			        data: ['9.9', '9.10', '9.11', '9.12', '9.13', '9.14', '9.15'],
+			        axisLine: {show: false},
+			        splitLine: {
+						show: false
+					}
+			    },
+			    yAxis: {
+			        type: 'value',
+			        max:1200,
+			        axisLine: {show: false},
+			        splitLine: {
+						show: true
+					}
+			    },
+			    series: [{
+			        data: [100, 200, 500, 700, 1000, 1100, 1150],
+			        type: 'line',
+			        itemStyle: { 
+			        	normal: { color: "#7f7fee"}, 
+//			        	lineStyle: { color: "#7f7fee" }
+			        },
+			        symbol: 'circle',     //设定为实心点
+                    symbolSize: 7,   //设定实心点的大小
+			    }]
+			};
  			$(document).ready(function(){
+				myChart.setOption(option);
 		        var targetText=$("#target").text();
 		        var clipboard = new Clipboard('#copy_btn');
 		 
