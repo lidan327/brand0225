@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<!--<script src="js/jquery.mobile-1.4.5.js"></script>-->
+	</head>
+	<body>
+		<div class="charge-page">
+			
+			<div class="charge-header bg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>账户</div>
+					<div class="header-right"></div>
+				</div>
+			</div>
+			
+			<div class="charge-container">
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">主账户余额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val">9000.00 <span class="bg-liner ac-btn">去充值 ></span></span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">MK棋牌余额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val">3726.50</span>
+					</div>
+				</div>
+				
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">乐乐棋牌余额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val">5463.50</span>
+					</div>
+				</div>
+				
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">琪琪棋牌余额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val">2742.40</span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">天天棋牌余额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val">3767.00</span>
+					</div>
+				</div>
+				
+				<div class='gray-block'></div>
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">提款金额：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val"><input type="text" placeholder="请输入金额" /></span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">提款银行：</span>
+					</div>
+					<div class="pull-right">
+						<span class="cell-left bank-transfer">
+							<a href="#"><img src="../img/yh-jianshe.png" alt="" /><text>中国建设银行(6789)</text><img src="../img/arrow-right.png"/></a>
+						</span>
+					</div>
+				</div>
+				
+				<div class="charge-cell">
+					<div class="pull-left">
+						<span class="cell-left">提款密码：</span>
+					</div>
+					<div class="pull-right">
+						<span class="ac-val"><input type="text" placeholder="请输入提款密码" /></span>
+					</div>
+				</div>
+				
+				<div class="charge-tips" style="padding: 0 1.25rem;">
+					<p>
+						<span class="pull-left" style="margin-left: 0;">*最低提款金额100元起。</span>
+						<span class="pull-right" style="margin-right: 0;"><a href="#" style="color: #3548da;">提款说明></a></span>
+					</p>
+				</div>
+				
+				<div class="step1">
+					<span><button class="bg-liner">下一步</button></span>
+				</div>
+				
+				
+			</div>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				//
+				
+				$(document).click(function(){
+					$(".bank-model").hide()
+				})
+				
+				$(".bank-transfer").click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					$(".bank-model").show()
+				})
+				
+				$('.bank-model-list').click(function(e){
+					e.preventDefault();
+					e.stopPropagation();
+				})
+			})
+		</script>
+	</body>
+	
+</html>

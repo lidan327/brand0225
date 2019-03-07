@@ -1,4 +1,7 @@
 /* basic.css */
+html,body{
+	/*background: #f5f5f5;*/
+}
 .pull-left{
 	float: left;
 	margin-left: 1.25rem;

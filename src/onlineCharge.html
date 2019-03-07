@@ -17,26 +17,23 @@
 				<div class="login-header-title flex header">
 					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
 					<div>在线充值</div>
-					<div class="header-right"><a href=""><text>充值记录</text></a></div>
+					<div class="header-right"><a href="dealDetail.html"><text>充值记录</text></a></div>
 				</div>
 			</div>
 			
 			<div class="charge-container">
 				<div class="charge-cell">
 					<div class="pull-left">
-						<span class="cell-left">用户名：</span><span class="">123</span>
+						<span class="cell-left">用户名：zhang123</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left">余额：</span><span>123</span>
+						<span class="cell-left"><span>余额：</span><span class="">34455.50</span><span>元</span></span>
 					</div>
 				</div>
 				
 				<div class="charge-cell">
 					<div class="pull-left">
-						<span class="cell-left">充值金额：</span>
-					</div>
-					<div class="pull-right">
-						<span class="cell-left">200</span>
+						<span class="cell-left">充值金额： 100</span>
 					</div>
 				</div>
 				
@@ -70,7 +67,7 @@
 						<span class="cell-left">支付宝：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left alipay-transfer"><a href=""><text>请选择支付通道</text><img src="../img/arrow-right.png"/></a></span>
+						<span class="cell-left alipay-transfer"><a href="alipayCharge.html"><text>请选择支付通道</text><img src="../img/arrow-right.png"/></a></span>
 					</div>
 				</div>
 				
@@ -85,7 +82,7 @@
 				<div class="bank-model-box">
 					<h1><text class="close-bankmodel"><</text> 选择银行</h1>
 					<div class="bank-model-list">
-						<div class="bank-model-cell">
+						<div class="bank-model-cell" >
 							<div class="bank-left">
 								<img src="../img/yh-jianshe.png"/>
 							</div>
@@ -148,6 +145,11 @@
 				$('.bank-model-list').click(function(e){
 					e.preventDefault();
 					e.stopPropagation();
+				})
+				
+				//
+				$('.bank-model-cell').click(function(){
+					window.location.href='../src/bankCharge.html'
 				})
 			})
 		</script>

@@ -616,6 +616,8 @@ html,body{
 	vertical-align: middle;
 	border: 0;
 	font-size: 1.5rem;
+	border-radius: 0;
+	margin-left: 0;
 	border-top-right-radius: 0.75rem;
 	border-bottom-right-radius: 0.75rem;
 }
@@ -654,7 +656,7 @@ html,body{
 	background: #fff;
 	padding: 2.75rem 0;
 }
-.pmt-detail-container{
+.pmt-detail-container,.pmt-help-container{
 	display: none;
 }
 .pmt-detail-table table{
@@ -708,6 +710,8 @@ html,body{
 }
 .login-header-title>div:nth-child(2){
 	font-size: 2rem;
+	/*display: flex*/
+	flex: 2;
 }
 .login-return{
 	text-align: left !important;
@@ -845,6 +849,15 @@ html,body{
 		width: 9rem !important;
 		margin-right: 1.5rem;
 	}
+	.deal-cell .pull-right{
+		max-width:45%
+	}
+	.deal-cell .pr-l{
+		display: block;
+	}
+	.deal-cell .pull-right p{
+		margin: 1rem 0 !important;
+	}
 }
 
 @media screen and (min-width:321px ) and (max-width:374px ){
@@ -861,11 +874,29 @@ html,body{
 		width: 15rem !important;
 		margin-right: 1.5rem;
 	}
+	.deal-cell .pull-right{
+		max-width:45%
+	}
+	.deal-cell .pr-l{
+		display: block;
+	}
+	.deal-cell .pull-right p{
+		margin: 1rem 0 !important;
+	}
 }
 
 @media screen and (min-width:375px ) and (max-width:410px ){
 	.register-card>div>input{
 		width: 12rem !important;
+	}
+	.deal-cell .pull-right{
+		max-width:45%
+	}
+	.deal-cell .pr-l{
+		display: block;
+	}
+	.deal-cell .pull-right p{
+		margin: 1rem 0 !important;
 	}
 }
 
@@ -890,11 +921,21 @@ img{ pointer-events: none; }
 
 /*在线充值页面 开始*/
 .charge-cell{
-	height: 50px;
-	line-height: 50px;
+	color: #333;
+	height: 6.25rem;
+	line-height: 6.25rem;
 	border-bottom: 1px solid #eee;
 	font-size: 1.75rem;
-	clear: both;
+	clear: both; 
+}
+.charge-cell .pull-left{
+	/*background: #EE775B;*/
+	width: 25%;
+}
+.charge-cell .pull-right{
+	/*background: #E3F0FE;*/
+	text-align: right;
+	width: 65%;
 }
 .charge-items{
 	display: flex;
@@ -980,27 +1021,29 @@ img{ pointer-events: none; }
 }
 .bank-model-list{
 	padding: 0 1.25rem;
+	border-top: 1px solid #eee;
 }
 .bank-model-cell{
-	height: 50px;
-	line-height: 50px;
+	height: 6.25rem;
+	line-height: 6.25rem;
 	clear: both;
 	display: flex;
 }
 .bank-model-cell>div{
 	float: left;
-	height: 50px;
-	line-height: 50px;
+	height: 6.25rem;
+	line-height: 6.25rem;
 	width: 10%;
 }
 .bank-model-cell>div p{
 	line-height: 1;
-	margin: 8px 0 4px;
+	margin: 0;
+	/*margin: 1.5rem 0 0.25rem;*/
 }
 .bank-model-cell>div img{
-	width: 22px;
-	height: 22px;
-	margin-top: 14px;
+	width: 2.75rem;
+	height: 2.75rem;
+	margin-top: 1.75rem;
 }
 .bank-model-cell .bank-right{
 	width: 90%;
@@ -1008,10 +1051,11 @@ img{ pointer-events: none; }
 	border-bottom: 1px solid #eee;
 }
 .bankname{
-	font-size: 14px;
+	font-size: 1.75rem;
+	margin: 1.5rem 0 0.75rem !important
 }
 .transfer-money{
-	font-size: 11px;
+	font-size: 1.375rem;
 	color: #e86a6a;
 }
 .disabled-cell .bankname,.disabled-cell .transfer-money{
@@ -1022,10 +1066,13 @@ img{ pointer-events: none; }
 }
 .bank-charge-title>h1{
 	font-size: 1.75rem;
+	color: #333;
+	font-weight: normal;
 }
 .bank-charge-title p{
 	font-size: 1.5rem;
 	color: #E86A6A;
+	padding: 0 14px;
 }
 .gray-block{
 	height: 10px;
@@ -1046,9 +1093,11 @@ img{ pointer-events: none; }
 .charge-cell .pull-right input{
 	border: 0;
 	/*background: red;*/
-	height: 47px;
-	line-height: 47px;
+	width: 80%;
+	height: 4.25rem;
+	line-height: 4.25rem;
 	text-align: right;
+	font-size: 1.75rem;
 }
 .step1{
 	padding: 2rem 0;
@@ -1060,19 +1109,32 @@ img{ pointer-events: none; }
 	text-align: center;
 }
 .step1>span button{
-	width: 68%;
-	height: 3.125rem;
+	width: 80%;
+	height:4.75rem;
 	color: #e86a6a;
 	background: #fff;
-	border-radius: 3.125rem;
+	border-radius: 4.75rem;
+	font-size: 2.125rem;
 	border: 1px solid #e86a6a;
 }
-.cell-left img{
+.cell-left{
+	display: inline-block;
+	text-align: right;
+	white-space: nowrap;
+}
+.cell-left img:first-child{
+	width: 2.75rem;
+	height: 2.75rem;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+.cell-left img:last-child{
 	height: 1.25rem;
 	vertical-align: middle;
 	margin-left: 4px;
 }
-.cell-left text{
+.cell-left span{
+	display: inline-block;
 	vertical-align: middle;
 }
 .charge-over-top>p .co-left{
@@ -1089,6 +1151,16 @@ img{ pointer-events: none; }
 	font-size: 1.5rem;
 	color: #999;
 	text-indent: 1.25rem;
+}
+.charge-over-top{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 2rem;
+	padding-top: 3.125rem;
+}
+.charge-over-top>p{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1.625rem;
 }
 .co-step{
 	width: 64%;
@@ -1129,6 +1201,164 @@ img{ pointer-events: none; }
     display: inline-block;
     margin-left: 3.25rem;
 }
+
+.charge-over-bottom{
+	padding-bottom: 2rem;
+	padding-top: 3.125rem;
+}
+.divide-line{
+	height: 3.75rem;
+	width: 0.1rem;
+	background: #bcbbbb;
+	margin: 4px 0;
+	margin-left: 1.275rem;
+}
+.co-btn{
+	margin: 0 5.3125rem;
+	text-align: center;
+}
+.co-btn button{
+	width: 100%;
+	height: 4rem;
+	margin-top: 4.25rem;
+	font-size: 2.125rem;
+	border-radius: 4rem;
+	border: 0;
+	padding: 0;
+}
 /*选择银行弹框结束*/
 
 /*在线充值页面 结束*/
+
+/*交易明细*/
+
+.deal-page,.dealDetail{
+	/*height: 100%;*/
+	background: #f5f5f5;
+	padding-bottom: 10px;
+}
+.deal-cell{
+	background: #fff;
+    clear: both;
+    height: 9.375rem;
+    margin: 1.25rem;
+    font-size: 1.5rem;
+    border-radius: 1.25rem;
+}
+.deal-cell .pull-right{
+	text-align: right;
+}
+.deal-cell p:first-child{
+	margin: 1.875rem 0 1rem;
+}
+.deal-cell p>span{
+	vertical-align: middle;
+}
+.deal-cell .pl-l{
+	font-size: 1.75rem;
+	font-weight: 600;
+}
+.deal-cell .pr-l{
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+.deal-cell .pl-price{
+	font-size: 1.75rem;
+	color: #ea4811;
+}
+.deal-cell .pr-time{
+	color: #999;
+}
+.db-btn{
+	display: inline-block;
+	width: 5.625rem;
+	height: 2.125rem;
+	color: #fff;
+	text-align: center;
+	line-height: 2.125rem;	
+	border-radius: 2.125rem;
+	font-size: 1.375rem;
+	vertical-align: middle;
+	margin-left: 0.625rem;
+}
+.db-success{
+	background: #4dd346;
+}
+.db-failure{
+	background: #ef4743;
+}
+.db-wait{
+	background: #fbaa35;
+}
+.loadmore{
+	text-align: center;
+}
+.loadmore>span{
+	display: inline-block;
+	width: 12.5rem ;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #666;
+	border-radius: 2.5rem;
+	border: 1px solid #ddd;
+	vertical-align: middle;
+}
+.loadmore>span img{
+	height: 0.75rem;
+	/*float: left;*/
+	margin-top: 0.875rem;
+	margin-right: 0.5rem;
+	/*margin-left: 1.875rem;*/
+}
+.loadmore>span text{
+	/*float: left;*/
+	height: 100%;
+	font-size: 1.375rem;
+}
+.lose-money{
+	color: #4dd346;
+}
+.win-money{
+	color: #ef4743;
+}
+.ac-val{
+	color: #ea4811;
+	font-weight: 600;
+}
+.ac-btn{
+	display: inline-block;
+	width: 5.75rem;
+	text-align: center;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-size: 1.5rem;
+	font-weight: normal !important;
+	border-radius: 2.5rem;
+}
+.alipay-charge-code{
+	width: 15rem;
+	height: 15rem;
+	display: block;
+	margin: auto;
+}
+.my-floor-item>a{
+	display: block;
+	text-decoration: none;
+}
+.pm-help-body{
+	height: 200px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 26px 0;
+}
+.charge-page,.index-page{
+	background: #fff;
+}
+.bank-transfer,.alipay-transfer,.bank-transfer>a,.alipay-transfer>a{
+	display: block;
+	height: 100%;
+}
+/*交易明细结束*/

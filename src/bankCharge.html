@@ -26,7 +26,7 @@
 					<h1>填写转账资料</h1>
 					<p>选择银行已完成！以下是您欲转账到该银行卡的账户资料</p>
 				</div>
-				<div class="charge-cell">
+				<div class="charge-cell" style="border-top:1px solid #eee">
 					<div class="pull-left">
 						<span class="cell-left">订单号：</span>
 					</div>
@@ -50,7 +50,7 @@
 						<span class="cell-left">收款人：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left">张大法 <span class="copy-btn">复制</span></span>
+						<span class="cell-left" id="target1">张大法</span><button data-clipboard-action="copy" data-clipboard-target="#target1" class="copy-btn" id="copy_btn1">复制</button>
 					</div>
 				</div>
 				
@@ -60,7 +60,7 @@
 						<span class="cell-left">银行账号：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left">627381736273827 <span class="copy-btn">复制</span></span>
+						<span class="cell-left" id="target2">627381736273827</span><button data-clipboard-action="copy" data-clipboard-target="#target2" class="copy-btn" id="copy_btn2">复制</button>
 					</div>
 				</div>
 				
@@ -69,7 +69,7 @@
 						<span class="cell-left">开户行：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left">北京市五棵松支行 <span class="copy-btn">复制</span></span>
+						<span class="cell-left" id="target3">北京市五棵松支行</span><button data-clipboard-action="copy" data-clipboard-target="#target3" class="copy-btn" id="copy_btn3">复制</button>
 					</div>
 				</div>
 				
@@ -79,7 +79,7 @@
 						<span class="cell-left">存款人姓名：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left"><input type="text" placeholder="请输入姓名" /></span>
+						<span class="cell-left"><input type="text" placeholder="请输入姓名" value="" /></span>
 					</div>
 				</div>
 				
@@ -88,7 +88,7 @@
 						<span class="cell-left">存入金额：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left"><input type="text" placeholder="请输入金额" value="100" /></span>
+						<span class="cell-left"><input type="number" placeholder="请输入金额" value="100" /></span>
 					</div>
 				</div>
 				
@@ -97,13 +97,13 @@
 						<span class="cell-left">存入方式：</span>
 					</div>
 					<div class="pull-right">
-						<span class="cell-left"><text>支付宝转账</text><img src="../img/arrow-right.png"/></span>
+						<span class="cell-left"><span>支付宝转账</span><img src="../img/arrow-right.png"/></span>
 					</div>
 				</div>
 				
 				<div class="step1">
-					<span><button>上一步</button></span>
-					<span><button class="bg-liner">下一步</button></span>
+					<span><a href="onlineCharge.html"><button>上一步</button></a></span>
+					<span><a href="chargeOver.html"><button class="bg-liner">下一步</button></a></span>
 				</div>
 				
 				<div class="charge-tips">
@@ -122,6 +122,26 @@
 			
 			$(function(){
 				//
+		        var targetText1=$("#target1").text();
+		        var targetText2=$("#target2").text();
+		        var targetText3=$("#target3").text();
+		        var clipboard1 = new Clipboard('#copy_btn1');
+		        var clipboard2 = new Clipboard('#copy_btn2');
+		        var clipboard3 = new Clipboard('#copy_btn3');
+		 
+		        clipboard1.on('success', function(e) {
+		            alert("复制成功");
+		            e.clearSelection();
+		        });
+		        clipboard2.on('success', function(e) {
+		            alert("复制成功");
+		            e.clearSelection();
+		        });
+		        clipboard3.on('success', function(e) {
+		            alert("复制成功");
+		            e.clearSelection();
+		        });
+		        
 				
 				$(document).click(function(){
 					$(".bank-model").hide()
