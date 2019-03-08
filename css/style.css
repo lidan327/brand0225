@@ -441,7 +441,7 @@ html,body{
 	border-top-right-radius: 10px;
 	margin-top: -10px;
 	padding-top: 1.25rem;
-	height: 8rem;
+	height: 74px;
 }
 .my-nav>div{
     flex: 1;
@@ -456,13 +456,15 @@ html,body{
 .my-nav .nav-menu>text{
 	display: block;
 	text-align: center;
+	height: 1.5rem;
 	font-size: 1.5rem;
 }
 .my-nav .nav-menu>text:first-child{
 	color: #ee775b;
+	font-weight: 600;
 }
 .my-nav .nav-menu>text:last-child{
-	margin-top: 1.25rem;
+	margin-top: 1rem;
 }
 /*我的头部 end*/
 
@@ -475,7 +477,7 @@ html,body{
 	height: 5.25rem;
 	line-height: 5.25rem;
 	font-size: 1.75rem;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #f5f5f5;
 	background: #fff;
 }
 .my-container .my-title>.pull-left{
@@ -488,26 +490,23 @@ html,body{
 .my-container .my-title>.pull-right>img,.my-container .my-title>.pull-right>text{
 	height: 1.25rem;
 	vertical-align: middle;
+	margin-left: 2px;
 }
 .my-floor{
 	display: flex;
 	clear: both;
 	background: #fff;
-	padding-bottom: 2.125rem;
+	padding-bottom: 17px;
 }
 .my-floor>div{
 	flex: 1;
 	text-align: center;
 }
 .my-floor>div img{
-	/*margin-top: 2.5rem;
-	margin-bottom:1.25rem;
-	width: 2.5rem;
-	height: 2.5rem;*/
 	width: 2rem;
 	height: 2rem;
-	margin-top: 2rem;
-	margin-bottom:1rem;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 .my-floor>div text{
 	display: block;
@@ -517,8 +516,8 @@ html,body{
 	white-space: nowrap;
 }
 .represent-menu>div img,.quick-entry-menu>div img{
-	width: 3rem;
-	height: 3rem;
+	width: 3.25rem;
+	height: 3.25rem;
 }
 .quick-entry{
 	margin-bottom: 53px;
@@ -583,9 +582,11 @@ html,body{
 }
 .promote-floor>.yellow{
 	color: #ee775b;
+	font-weight: 600;
 }
 .promote-floor>text:last-child{
 	margin-top: 1.25rem;
+	font-size: 1.4375rem;
 }
 .promote-link{
 	padding-bottom: 1.875rem;
@@ -600,6 +601,7 @@ html,body{
 	padding-bottom: 2.125rem;
 }
 .promote-link-title a{
+	margin-left: 4px;
 	color: #3548da!important;
 }
 .promote-link-inp>div{
@@ -647,6 +649,8 @@ html,body{
 	text-align: center;
 	font-size: 1.5rem;
 	color: #333;
+	padding: 0;
+	margin: 0;
 }
 .commission-reward{
 	font-size: 1.6875rem;
@@ -1394,4 +1398,9 @@ img{ pointer-events: none; }
 .time-selcte>li:active{
 	/*background: ;*/
 }
+.commission-reward-title{
+	font-weight: 600;
+	font-size: 1.6875rem;
+}
 /*交易明细结束*/
+
