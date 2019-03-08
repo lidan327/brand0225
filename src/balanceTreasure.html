@@ -60,7 +60,10 @@
 				display: flex;
 				justify-content: center;
 			}
-			.balance-btn>p{
+			.balance-btn>a{
+				text-decoration: none;
+			}
+			.balance-btn>a>p{
 				height: 2.75rem;
 				line-height: 2.75rem;
 				width: 9rem;
@@ -70,7 +73,7 @@
 				border: 1px solid #EA4811;
 				border-radius: 2rem;
 			}
-			.balance-btn>p:first-child{
+			.balance-btn>a>p:first-child{
 				margin-right: 2rem;
 			}
 		</style>
@@ -128,8 +131,8 @@
 					<span>收益=昨日余额宝余额 * (基准收益率+浮动基点)</span>
 					<a href="#">详细说明></a>
 					<div class="balance-btn">
-						<p>转入</p>
-						<p>转出</p>
+						<a href="balanceTreasureIn.heml"><p>转入</p></a>
+						<a href="balanceTreasureOut.html"><p>转出</p></a>
 					</div>
 				</div>
 			</div>

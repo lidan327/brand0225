@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/basic.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swipeslider.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			/*account-page*/
+			.balanceTreasureOut-page{
+				height: 100%;
+				background: #F5F5F5;
+			}
+			/*header 开始*/
+			.hostBg-liner{
+				height: auto;	
+				background: linear-gradient(86deg,#FB6C25,#DC2A01);
+			}
+			/*header 结束*/
+			
+			/*body 开始*/	
+			.balanceTreasureOut-body-outMoney{
+				background: #FFFFFF;
+				padding: 0 1.125rem;
+				color: #333333;
+				height: auto;
+			}
+			.outMoney-div{
+				display: flex;
+				position: relative;
+				border-bottom: 1px solid #CCCCCC;
+				line-height: 3.5rem;
+			}
+			.balanceTreasureOut-body-outMoney>div:first-child{
+				line-height: 3rem;
+				font-size: 1.5rem;
+			}
+			.outMoney-div>span{
+				font-size: 1.5rem;
+				flex: auto;
+			}
+			.utMoney-left-text>span{
+				margin-bottom: 1rem;
+				position: absolute;
+				top: -0.5rem;
+			}
+			.utMoney-left-text input{
+				border: none;
+				font-size: 2.5rem;
+				width: 13rem;
+				color: #000000;
+				margin-left: 1.5rem;
+			}
+			.outMoney-right-text{
+				color: blue;
+				font-size: 1.5rem;
+				text-align: right;
+			}
+			.outMoney-remark{
+				height: 3.5rem;
+				color: #666666;
+				font-size: 1.5rem;
+			}
+			/*body 结束*/	
+			
+			/*footer 开始*/
+			.balanceTreasureOut-footer{
+				height: 15.5rem;
+				display: flex;
+				padding: 0 15%;
+				background: #F5F5F5;
+			}
+			.balanceTreasureOut-footer>span{
+				height: 5.5rem;
+				width: 100%;
+				background: #EA4811;
+				border-radius: 10rem;
+				margin: auto;
+				text-align: center;
+    			line-height: 5.5rem;
+    			color: #FFFFFF;
+    			font-size: 2.125rem;
+			}
+			/*footer 结束*/
+			
+		</style>
+	</head>
+	<body>
+		<div class="balanceTreasureOut-page">
+			<!--header 开始-->
+			<div class="hostBg-liner">
+				<div class="login-header-title flex header">
+					<div class="login-return"><a href="javascript:history.back(-1)"><img src="../img/arrow-left.png"/><text>返回</text></a></div>
+					<div>余额宝转出</div>
+					<div></div>
+				</div>
+			</div>
+			<!--header 结束-->
+			<!--body 开始 -->
+			<div class="balanceTreasureOut-body">
+				<div class="balanceTreasureOut-body-outMoney">
+					<div>
+						<span>转出金额</span>
+					</div>
+					<div class="outMoney-div">
+						<span class="utMoney-left-text"><span class="">￥</span><input type="text" value="" placeholder="请输入金额"/></span>
+						<span class="outMoney-right-text">全部</span>
+					</div>
+					<div class="outMoney-remark">
+						<span>备注:最低转入金额200元，您最多能转入3910.00元</span>
+					</div>
+				</div>
+				<div class="balanceTreasureOut-footer">
+					<span>确认转出</span>
+				</div>
+			</div>
+			<!--body 结束 -->
+		</div>
+	</body>
+</html>

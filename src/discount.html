@@ -78,13 +78,27 @@
 			</div>
 			<!--body 开始-->
 			<div class="specialOffer-body">
-				<div class="specialOffer-body-img">
+				<div class="specialOffer-body-img" onclick="slideInfo(0)">
 					<img src="../img/huodong-1.png" alt="" />
 				</div>
-				<div class="specialOffer-body-img">
+				<div class="specialOffer-body-div">
+					<span>—— 活动详情 ——</span>
+					<p>先设置返点后即可生成邀请码(建议下调0.5假设自身返点8您填写7.5即可)将邀请码发送给别人注册成功后就是您的
+					下级。点击会员管理就可以看到下级注册的账号；下级下注系统会将您的佣金返现到您的账号上，既下既返！温馨提示：
+					将您的邀请码发送给代理专员可生成一条属于您的邀请码!
+					</p>
+				</div>
+				<div class="specialOffer-body-img" onclick="slideInfo(1)">
 					<img src="../img/huodong-2.png" alt="" />
 				</div>
-				<div class="specialOffer-body-img">
+				<div class="specialOffer-body-div">
+					<span>—— 活动详情 ——</span>
+					<p>先设置返点后即可生成邀请码(建议下调0.5假设自身返点8您填写7.5即可)将邀请码发送给别人注册成功后就是您的
+					下级。点击会员管理就可以看到下级注册的账号；下级下注系统会将您的佣金返现到您的账号上，既下既返！温馨提示：
+					将您的邀请码发送给代理专员可生成一条属于您的邀请码!
+					</p>
+				</div>
+				<div class="specialOffer-body-img" onclick="slideInfo(2)">
 					<img src="../img/huodong-1-1.png" alt="" />
 				</div>
 				<div class="specialOffer-body-div">
@@ -134,4 +148,15 @@
 			<!--footer 结束-->
 		</div>
 	</body>
+	<script type="text/javascript">
+		$('.specialOffer-body-div').css('display','none')
+		function slideInfo(val){
+			var _thisDiv = $('.specialOffer-body-div')
+			for (var i=0;i<_thisDiv.length;i++){
+				if (val == i){
+					$(_thisDiv[i]).slideToggle("slow");
+				}
+			}
+		}
+	</script>
 </html>

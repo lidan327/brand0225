@@ -39,6 +39,9 @@
 			.gameLobby-body>div{
 				flex: 1;
 			}
+			.gameLobby-body>div:last-child{
+				background: #F5F5F5;
+			}
 			.gameLobby-content{
 				background: #FFFFFF;
 			}
@@ -71,6 +74,9 @@
 				height: 8.25rem;
 				width: 12.8125rem;
 			}
+			.activeType{
+				color: #EA4811;
+			}
 			/*body 结束*/
 		</style>
 	</head>
@@ -88,7 +94,7 @@
 			<!--body 开始-->
 			<div class="gameLobby-body">
 				<div class="gameLobby-content">
-					<div class="gameLobby-content-row active">
+					<div class="gameLobby-content-row">
 						<span>天天棋牌</span>
 						<span>8989.89</span>
 					</div>
@@ -106,23 +112,24 @@
 					</div>
 				</div>
 				<div>
-					<div class="gameLobby-img">
+					<div class="gameLobby-img" onclick="gameType(1)">
 						<img src="../img/yxdt-pic-1.png"/>
 					</div>
-					<div class="gameLobby-img">
+					<div class="gameLobby-img" onclick="gameType(2)">
 						<img src="../img/yxdt-pic-2.png"/>
 					</div>
-					<div class="gameLobby-img">
+					<div class="gameLobby-img" onclick="gameType(3)">
 						<img src="../img/yxdt-pic-3.png"/>
 					</div>
-					<div class="gameLobby-img">
+					<div class="gameLobby-img" onclick="gameType(4)">
 						<img src="../img/yxdt-pic-2.png"/>
 					</div>
-					<div class="gameLobby-img">
+					<div class="gameLobby-img" onclick="gameType(5)">
 						<img src="../img/yxdt-pic-3.png"/>
 					</div>
 				</div>
 			</div>
+			<div style="height: 5rem;"></div>
 			<!--body 结束-->
 			<!--footer 开始-->
 			<div class="footer">
@@ -161,4 +168,21 @@
 			<!--footer 结束-->
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".gameLobby-img").click(function(){
+
+			})
+		})
+		function gameType(val){
+			var _thisActive = $(".gameLobby-content-row")
+			for (var i=0; i<_thisActive.length;i++){
+				if(val-1 == i){
+					$(_thisActive[i]).addClass("activeType")
+					$(_thisActive[i]).siblings().removeClass("activeType")
+				}
+			}
+			
+		}
+	</script>
 </html>
