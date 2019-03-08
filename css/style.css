@@ -696,9 +696,16 @@ html,body{
 }
 .pmt-circle{
 	display: flex;
+	padding: 0 1.25rem;
 }
 .pmt-circle>div{
 	flex: 1;
+	text-align: center;
+}
+.pmt-circle>div img{
+    max-width: 80%;
+    position: relative;
+    z-index: 10;
 }
 .pmt-circle>div>div{
 	margin: auto;
@@ -1404,3 +1411,22 @@ img{ pointer-events: none; }
 }
 /*交易明细结束*/
 
+.pmt-circle>div{
+	position: relative;
+}
+.circle-text{
+    height: 90%;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    border-radius: 100%;
+    background: #fff;
+    margin-left: 10% !important;
+}
+.circle-text>p:first-child{
+	margin-top: 34px;
+	font-size: 1.75rem;
+}
+.pm-help-body{
+	font-size: 1.75rem;
+}
