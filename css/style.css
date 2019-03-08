@@ -487,7 +487,11 @@ html,body{
 	color: #666;
 	font-size: 1.5rem !important;
 }
-.my-container .my-title>.pull-right>img,.my-container .my-title>.pull-right>text{
+.my-container .my-title>.pull-right a{
+	text-decoration: none;
+	color: #666;
+}
+.my-container .my-title>.pull-right img,.my-container .my-title>.pull-right text{
 	height: 1.25rem;
 	vertical-align: middle;
 	margin-left: 2px;
@@ -1357,6 +1361,10 @@ img{ pointer-events: none; }
 	font-size: 1.5rem;
 	font-weight: normal !important;
 	border-radius: 2.5rem;
+}
+.ac-btn>a{
+	text-decoration: none;
+	color: #fff;
 }
 .alipay-charge-code{
 	width: 15rem;
