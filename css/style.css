@@ -42,7 +42,7 @@ html,body{
 .header-right{
 	text-align: right !important;
 }
-.header-right>a{
+.header-right>a,.header-right>span{
 	text-decoration: none;
 	color: #fff;
 	padding-right: 1.25rem;
@@ -56,10 +56,10 @@ html,body{
 
 /* 首页轮播 start*/
 .index-slider{
-	margin-top: -55px;
+	margin-top: -50px;
 }
 .index-slider .swipslider{
-	height: 110px;
+	height: 100px;
 	/*height: 8.45rem;*/
 	padding-top: 0!important;
 }
@@ -68,7 +68,11 @@ html,body{
 	height: 100%;
 }
 .index-slider .sw-bullet{
-	bottom: 6% !important;
+	bottom: 2% !important;
+}
+.sw-bullet li{
+	width: 6px !important;
+	height: 6px !important;
 }
 .index-page .container{
 	margin: 0 1.25rem!important;    
@@ -198,7 +202,6 @@ html,body{
 /*中奖排行 start*/
 .winner-list{
 	padding: 0 1.875rem;
-	margin-bottom: 150px;
 	color: #333;
 }
 .winner-title{
@@ -214,6 +217,9 @@ html,body{
 	font-size: 1.75rem;
 	font-weight: 600;
 	vertical-align: middle;
+}
+.winner-box{
+	/*padding-bottom: 5rem;*/
 }
 .winner-item{
 	height: 40px;
@@ -283,6 +289,8 @@ html,body{
 .download-ad img:first-child{
 	margin: 0 1.25rem;
 	height: 16px;
+	position: relative;
+	z-index: 1000;
 }
 .download-ad img:nth-child(2){
 	height: 38px;
@@ -849,7 +857,7 @@ html,body{
 		width: 9rem !important;
 		margin-right: 1.5rem;
 	}
-	.deal-cell .pull-right{
+	/*.deal-cell .pull-right{
 		max-width:45%
 	}
 	.deal-cell .pr-l{
@@ -857,6 +865,9 @@ html,body{
 	}
 	.deal-cell .pull-right p{
 		margin: 1rem 0 !important;
+	}*/
+	.db-btn{
+		width: 3.125rem !important;
 	}
 }
 
@@ -1360,5 +1371,27 @@ img{ pointer-events: none; }
 .bank-transfer,.alipay-transfer,.bank-transfer>a,.alipay-transfer>a{
 	display: block;
 	height: 100%;
+}
+.time-selcte{
+    list-style: none;
+    color: #fff;
+    font-size: 1.75rem;
+    position: fixed;
+    right: 0;
+    top: 48px;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.time-selcte>li{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 120px;
+    border-bottom: 1px solid #ff8d68;
+}
+.time-selcte>li:hover,
+.time-selcte>li:active{
+	/*background: ;*/
 }
 /*交易明细结束*/

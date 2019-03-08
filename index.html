@@ -151,12 +151,14 @@
 				</div>
 			</div>
 			<!--中奖排行 结束-->
-			
+			<div style="height: 140px; width: 100%; "></div>
 						
 			<!--下载app 开始-->
 			<div class="download">
 				<div class="download-ad pull-left">
-					<img src="img/ico-close.png" alt="" />
+					<span class="close-dn">
+						<img src="img/ico-close.png" alt=""/>
+					</span>
 					<img src="img/ico-pic-app.png" alt="" />
 					<text>乐云棋牌</text>
 				</div>
@@ -220,7 +222,12 @@
 			        sliderHeight: '30%'
 		        });
 		        
-		        //页面跳转
+		        //关闭下载
+		        
+		        	console.log($(".close-dn"))
+		        $(".close-dn").click(function(){
+		        	$(this).parents(".download").hide()
+		        })
 		    });
 		</script>		
 	</body>

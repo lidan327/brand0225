@@ -21,6 +21,15 @@
 				</div>
 			</div>
 			
+			<div class="selection">
+				<ul class="time-selcte bg-liner">
+					<li id="0">全部</li>
+					<li id="1">今日</li>
+					<li id="2">昨日</li>
+					<li id="3">近7天</li>
+				</ul>
+			</div>
+			
 			<div class="dealDetail">
 				<div class="deal-cell">
 					<div class="pull-left">
@@ -97,6 +106,18 @@
 		<script type="text/javascript">
 			
 			$(function(){
+				
+				//筛选
+				$('.select-btn').click(function(){
+					$(".time-selcte").slideToggle(200)
+				})
+				
+				$(".time-selcte li").click(function(){
+					var text = $(this).text();
+					var id = $(this).attr('id')
+					$('.select-btn span').html(text).attr("id",id)
+					$(".time-selcte").slideUp(100)
+				})
 			})
 		</script>
 	</body>
