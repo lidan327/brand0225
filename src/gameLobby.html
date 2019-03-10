@@ -94,19 +94,19 @@
 			<!--body 开始-->
 			<div class="gameLobby-body">
 				<div class="gameLobby-content">
-					<div class="gameLobby-content-row gameClick">
+					<div class="gameLobby-content-row gameClick activeType" status-id="1">
 						<span>天天棋牌</span>
 						<span>8989.89</span>
 					</div>
-					<div class="gameLobby-content-row gameClick">
+					<div class="gameLobby-content-row gameClick" status-id="2">
 						<span>元初棋牌</span>
 						<span>8989.89</span>
 					</div>
-					<div class="gameLobby-content-row gameClick">
+					<div class="gameLobby-content-row gameClick" status-id="3">
 						<span>BN棋牌</span>
 						<span>8989.89</span>
 					</div>
-					<div class="gameLobby-content-row gameClick">
+					<div class="gameLobby-content-row gameClick" status-id="4">
 						<span>AJ棋牌</span>
 						<span>8989.89</span>
 					</div>
@@ -124,9 +124,9 @@
 					<div class="gameLobby-img">
 						<img src="../img/yxdt-pic-2.png"/>
 					</div>
-					<div class="gameLobby-img">
+					<!--<div class="gameLobby-img">
 						<img src="../img/yxdt-pic-3.png"/>
-					</div>
+					</div>-->
 				</div>
 			</div>
 			<div style="height: 5rem;"></div>
@@ -170,9 +170,19 @@
 	</body>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$(".gameLobby-img").eq(1).hide();
+			$(".gameLobby-img").eq(2).hide();
+			$(".gameLobby-img").eq(3).hide();
 			$(".gameClick").click(function(){
 				$(this).addClass("activeType")
 				$(this).siblings().removeClass("activeType")
+				var statusId = $(this).attr('status-id')
+				console.log(statusId)
+				var statusImg = $(".gameLobby-img")
+				for (var i=0;i<statusImg.length;i++){
+					if(statusId == i+1)
+					$(statusImg[i]).show().siblings().hide();;
+				}
 			})
 		})
 //		function gameType(val){
