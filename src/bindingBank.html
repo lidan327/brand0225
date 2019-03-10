@@ -118,7 +118,7 @@
 					<div class="body-row-img">
 						<span class="body-row-account">开户银行：</span>
 					</div>
-					<div class="body-row-name">
+					<div class="body-row-name bank-transfer">
 						<img src="../img/ico-reload.png"/>
 						<span>中国建设银行</span>
 						<img src="../img/arrow-right.png" alt="" />
@@ -145,6 +145,75 @@
 				</div>
 			</div>
 			<!--body 结束 -->
+			<!--下拉菜单开始-->
+			<div class="bank-model">
+				<div class="bank-model-box">
+					<h1><text class="close-bankmodel"><</text> 选择银行</h1>
+					<div class="bank-model-list">
+						<div class="bank-model-cell" >
+							<div class="bank-left">
+								<img src="../img/yh-jianshe.png"/>
+							</div>
+							<div class="bank-right">
+								<p class='bankname'>中国建设银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						
+						<div class="bank-model-cell">
+							<div class="bank-left">
+								<img src="../img/yh-jiaotong.png"/>
+							</div>
+							<div class="bank-right">
+								<p class='bankname'>中国交通银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						
+						<div class="bank-model-cell disabled-cell">
+							<div class="bank-left">
+								<img src="../img/yh-zhongguo.png"/>
+							</div>
+							<div class="bank-right">
+								<p class='bankname'>中国银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+						
+						<div class="bank-model-cell  disabled-cell">
+							<div class="bank-left">
+								<img src="../img/yh-zhongguo.png"/>
+							</div>
+							<div class="bank-right">
+								<p class='bankname'>平安银行</p>
+								<p class="transfer-money">¥ 10-3000（转账成功后，再提交入款信息）</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--下拉菜单结束-->
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(document).click(function(){
+					$(".bank-model").hide()
+			})
+			$(".bank-transfer").click(function(e){
+						e.preventDefault();
+						e.stopPropagation();
+						$(".bank-model").show()
+			})
+			$('.bank-model-list').click(function(e){
+						e.preventDefault();
+						e.stopPropagation();
+			})
+					
+					//
+					$('.bank-model-cell').click(function(){
+						window.location.href='../src/bankCharge.html'
+			})
+		})
+	</script>
 </html>
