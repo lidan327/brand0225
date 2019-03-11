@@ -26,9 +26,10 @@
 				justify-content: center;
 				color: #FFFFFF;
 				line-height: 1.75rem;
+				font-size: 1.5rem
 			}
 			.earnings-balance:nth-child(1){
-				font-size: 0.7825rem;
+				font-size: 1.5rem;
 			}
 			.earnings-balance:nth-child(2){
 				font-size: 3.125rem;
@@ -62,19 +63,23 @@
 			}
 			.balance-btn>a{
 				text-decoration: none;
+				text-align: center;
+				flex: 1;
 			}
-			.balance-btn>a>p{
-				height: 2.75rem;
-				line-height: 2.75rem;
-				width: 9rem;
-				font-size: 1.125rem;
+			.balance-btn>a>span{
+				height: 48px;
+				line-height: 48px;
+				width: 12rem;
+				font-size: 1.875rem;
 				color: #333333;
 				background: #FFFFFF;
 				border: 1px solid #EA4811;
-				border-radius: 2rem;
+				border-radius: 48px;
+				color: #EA4811;
+				display: inline-block;
 			}
-			.balance-btn>a>p:first-child{
-				margin-right: 2rem;
+			.balance-btn>a>span:first-child{
+				/*margin-right: 2rem;*/
 			}
 		</style>
 	</head>
@@ -131,8 +136,8 @@
 					<span>收益=昨日余额宝余额 * (基准收益率+浮动基点)</span>
 					<a href="#">详细说明></a>
 					<div class="balance-btn">
-						<a href="balanceTreasureIn.html" onclick="btnBg(this)"><p>转入</p></a>
-						<a href="balanceTreasureOut.html" onclick="btnBg(this)"><p>转出</p></a>
+						<a href="balanceTreasureIn.html" onclick="btnBg(this)"><span class="bg-liner">转入</span></a>
+						<a href="balanceTreasureOut.html" onclick="btnBg(this)"><span>转出</span></a>
 					</div>
 				</div>
 			</div>
