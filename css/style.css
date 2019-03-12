@@ -18,7 +18,7 @@ html,body{
 .index-header>span{
 	flex: 1;
 	color: #fff;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	display: inline-block;
 	height: 48px;
 	line-height: 48px;
@@ -729,7 +729,7 @@ html,body{
 	border-bottom-right-radius: 3.75rem
 }
 .login-header-title{
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 }
 .login-header-title>div:nth-child(2){
 	font-size: 2rem;
@@ -875,12 +875,6 @@ html,body{
 	.register-card>div>input{
 		width: 9.5rem !important;
 	}
-	.deal-cell .pull-right{
-		max-width:45%
-	}
-	.db-btn{
-		width: 3.125rem !important;
-	}
 }
 
 @media screen and (min-width:321px ) and (max-width:374px ){
@@ -897,18 +891,15 @@ html,body{
 		width: 14rem !important;
 		margin-right: 1.5rem;
 	}
-	.deal-cell .pull-right p{
-		/*margin: 1rem 0 !important;*/
-	}
 }
 
 @media screen and (min-width:375px ) and (max-width:410px ){
 	.register-card>div>input{
 		width: 15rem !important;
 	}
-	.deal-cell .pull-right{
+	/*.deal-cell .pull-right{
 		max-width:45%
-	}
+	}*/
 }
 
 @media screen and (min-width:411px ) and (max-width:414px ){
@@ -933,10 +924,10 @@ img{ pointer-events: none; }
 /*在线充值页面 开始*/
 .charge-cell{
 	color: #333;
-	height: 6.25rem;
-	line-height: 6.25rem;
+	height: 5rem;
+	line-height: 5rem;
 	border-bottom: 1px solid #eee;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	clear: both; 
 }
 .charge-cell .pull-left{
@@ -974,6 +965,7 @@ img{ pointer-events: none; }
 .charge-item-active{
 	border: 1px solid #fd8686!important;
 	background: #ffe2e1;
+	color: #ea4811;
 }
 .bank-transfer img,.alipay-transfer img{
 	height: 22px;
@@ -1023,7 +1015,7 @@ img{ pointer-events: none; }
 }
 .bank-model-box h1{
 	text-align: center;
-	font-size: 2.125rem;
+	font-size: 1.875rem;
 	color: #333;
 	padding: 0 1.25rem;
 }
@@ -1062,7 +1054,7 @@ img{ pointer-events: none; }
 	border-bottom: 1px solid #eee;
 }
 .bankname{
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	margin: 1.5rem 0 0.75rem !important
 }
 .transfer-money{
@@ -1108,7 +1100,8 @@ img{ pointer-events: none; }
 	height: 4.25rem;
 	line-height: 4.25rem;
 	text-align: right;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
+	color: #333;
 }
 .step1{
 	padding: 2rem 0;
@@ -1121,11 +1114,11 @@ img{ pointer-events: none; }
 }
 .step1>span button{
 	width: 80%;
-	height:4.75rem;
+	height: 48px;
 	color: #e86a6a;
 	background: #fff;
-	border-radius: 4.75rem;
-	font-size: 2.125rem;
+	border-radius: 48px;
+	font-size: 1.875rem;
 	border: 1px solid #e86a6a;
 }
 .cell-left{
@@ -1134,8 +1127,8 @@ img{ pointer-events: none; }
 	white-space: nowrap;
 }
 .cell-left img:first-child{
-	width: 2.75rem;
-	height: 2.75rem;
+	width: 2rem;
+	height: 2rem;
 	vertical-align: middle;
 	margin-right: 4px;
 }
@@ -1154,7 +1147,7 @@ img{ pointer-events: none; }
 	display: inline-block;
 	font-size: 1.5rem;
 	color: #333;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 }
 .charge-over-top>p .co-right{
 	width: 60%;
@@ -1255,21 +1248,25 @@ img{ pointer-events: none; }
     margin: 1.25rem;
     font-size: 1.5rem;
     border-radius: 1.25rem;
+    display: flex;
+    justify-content: space-between;
 }
 .deal-cell .pull-right{
 	text-align: right;
 }
 .deal-cell p:first-child{
 	margin: 1.875rem 0 1rem;
+	white-space: nowrap;
 }
 .deal-cell .pull-right p:first-child{
-	margin: 2.25rem 0 1rem
+	margin: 2.25rem 0 1rem;
+	white-space: nowrap;
 }
 .deal-cell p>span{
 	vertical-align: middle;
 }
 .deal-cell .pl-l{
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	font-weight: 600;
 }
 .deal-cell .pr-l{
@@ -1285,15 +1282,16 @@ img{ pointer-events: none; }
 }
 .db-btn{
 	display: inline-block;
-	width: 5.625rem;
+	/*width: 5.625rem;*/
 	height: 2.125rem;
 	color: #fff;
 	text-align: center;
 	line-height: 2.125rem;	
 	border-radius: 2.125rem;
-	font-size: 1.375rem;
+	font-size: 1.25rem;
 	vertical-align: middle;
 	margin-left: 0.625rem;
+	padding: 0 0.45rem;
 }
 .db-success{
 	background: #4dd346;
@@ -1342,13 +1340,14 @@ img{ pointer-events: none; }
 }
 .ac-btn{
 	display: inline-block;
-	width: 5.75rem;
+	/*width: 5.75rem;*/
 	text-align: center;
 	height: 2.5rem;
 	line-height: 2.5rem;
 	font-size: 1.5rem;
 	font-weight: normal !important;
 	border-radius: 2.5rem;
+	padding: 0 0.45rem;
 }
 .ac-btn>a{
 	text-decoration: none;
@@ -1382,7 +1381,7 @@ img{ pointer-events: none; }
 .time-selcte{
     list-style: none;
     color: #fff;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     position: fixed;
     right: 0;
     top: 48px;
