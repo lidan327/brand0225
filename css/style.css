@@ -1251,8 +1251,18 @@ img{ pointer-events: none; }
     display: flex;
     justify-content: space-between;
 }
+.deal-cell .pull-left{
+	flex: auto;
+	margin-left: 0;
+	float: none;
+	padding-left: 1.25rem;
+}
 .deal-cell .pull-right{
 	text-align: right;
+	flex: auto;
+	margin-right: 0;
+	float: none;
+	padding-right: 1.25rem;
 }
 .deal-cell p:first-child{
 	margin: 1.875rem 0 1rem;

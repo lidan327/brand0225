@@ -33,7 +33,7 @@
 				
 				<div class="charge-cell">
 					<div class="pull-left">
-						<span class="cell-left">充值金额： 100</span>
+						<span class="cell-left"><text>充值金额：</text> <text class='c_money'>100</text></span>
 					</div>
 				</div>
 				
@@ -150,6 +150,13 @@
 				//
 				$('.bank-model-cell').click(function(){
 					window.location.href='../src/bankCharge.html'
+				})
+				
+				$(".charge-money-item").click(function(){
+					$(this).parent().find('span').removeClass('charge-item-active')
+					$(this).addClass('charge-item-active');
+					var val = $(this).html().slice(0,-1);
+					$(".c_money").html(val)
 				})
 			})
 		</script>
