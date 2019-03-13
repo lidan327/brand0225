@@ -828,7 +828,7 @@ html,body{
 	text-decoration: none;
 }
 .login-info{
-	font-size: 1.625rem;
+	font-size: 1.5rem;
 	margin-top: 10px;
 	color: #333;
 }
@@ -1223,10 +1223,10 @@ img{ pointer-events: none; }
 }
 .co-btn button{
 	width: 100%;
-	height: 4rem;
+	height: 48px;
 	margin-top: 4.25rem;
-	font-size: 2.125rem;
-	border-radius: 4rem;
+	font-size: 1.875rem;
+	border-radius: 48px;
 	border: 0;
 	padding: 0;
 }
@@ -1420,8 +1420,18 @@ img{ pointer-events: none; }
 }
 .circle-text>p:first-child{
 	margin-top: 34px;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
+}
+.circle-text>p:last-child{
+	color: #ee775b;
+	font-weight: 600;
+	font-size: 1.875rem;
 }
 .pm-help-body{
 	font-size: 1.75rem;
+}
+
+.index-box-shadow{
+	border-radius: 1rem;
+	box-shadow: 0 0 8px 1px #380202
 }

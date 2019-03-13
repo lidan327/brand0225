@@ -223,10 +223,14 @@
 		        });
 		        
 		        //关闭下载
-		        
-		        	console.log($(".close-dn"))
 		        $(".close-dn").click(function(){
 		        	$(this).parents(".download").hide()
+		        })
+		        
+		        //
+		        $(".looby-item span").click(function(){
+		        	$(".looby-item span").find('img').removeClass('index-box-shadow')
+		        	$(this).find('img').addClass('index-box-shadow')
 		        })
 		    });
 		</script>		

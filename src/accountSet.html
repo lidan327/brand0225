@@ -55,11 +55,10 @@
 				color: #666;
 			}
 			.body-row-img img{
-				height: 2.75rem;
-				width: 2.75rem;
+				max-height: 2rem;
+				max-width: 2rem;
 				vertical-align: middle;
-				padding-left: 1.25rem;
-				padding-right: 1.25rem;
+				margin-left: 0.8rem;
 			}
 			.body-row-name{
 				text-align: right;
@@ -68,14 +67,14 @@
 			.body-row-name img{
 				vertical-align: middle;
 				padding-left: 0.5rem;
-				height: 1.5rem;
+				height: 1.25rem;
 			}
 			/*body 结束*/
 			/*footer 开始*/
 			.account-footer{
 				height: 15.5rem;
 				display: flex;
-				padding: 0 15%;
+				padding: 0 1.25rem;
 				background: #F5F5F5;
 			}
 			.account-footer>span{
@@ -83,18 +82,22 @@
 				width: 100%;
 				background: #EA4811;
 				border-radius: 10rem;
-				margin: auto;
+				margin: 40px auto;
 				text-align: center;
     			line-height: 48px;
     			color: #FFFFFF;
     			font-size: 1.875rem;
 			}
 			/*footer 结束*/
-			
+			.accountset .body-row-img>span:first-child{
+				display: inline-block;
+				width: 3.25rem;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="account-page">
+		<div class="account-page accountset">
 			<!--header 开始-->
 			<div class="hostBg-liner">
 				<div class="login-header-title flex header">
@@ -111,35 +114,35 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-huiyuan.png"/>
+						<span><img src="../img/zh-ico-huiyuan.png"/></span>
 						<span class="body-row-account">会员账户：</span>
 					</div>
 					<div class="body-row-name"><span>zhangsan123</span></div>
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-xm.png"/>
+						<span><img src="../img/zh-ico-xm.png"/></span>
 						<span class="body-row-account">真实姓名：</span>
 					</div>
 					<div class="body-row-name"><span>张三</span></div>
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-wx.png"/>
+						<span><img src="../img/zh-ico-wx.png"/></span>
 						<span class="body-row-account">微信：</span>
 					</div>
 					<div class="body-row-name"><span>san12312</span></div>
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-qq.png"/>
+						<span><img src="../img/zh-ico-qq.png"/></span>
 						<span class="body-row-account">QQ：</span>
 					</div>
 					<div class="body-row-name"><span>409806215</span></div>
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-sj.png"/>
+						<span><img src="../img/zh-ico-sj.png"/></span>
 						<span class="body-row-account">手机号：</span>
 					</div>
 					<div class="body-row-name">
@@ -151,7 +154,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/wo-huiyuan.png"/>
+						<span><img src="../img/wo-huiyuan.png"/></span>
 						<span class="body-row-account">会员等级：</span>
 					</div>
 					<div class="body-row-name"><span>VIP1</span><img src="../img/arrow-right.png"/></div>
@@ -161,7 +164,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-code1.png"/>
+						<span><img src="../img/zh-ico-code1.png"/></span>
 						<span class="body-row-account">登录密码：</span>
 					</div>
 					<div class="body-row-name">
@@ -173,7 +176,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-code2.png"/>
+						<span><img src="../img/zh-ico-code2.png"/></span>
 						<span class="body-row-account">提款密码：</span>
 					</div>
 					<div class="body-row-name">
@@ -185,7 +188,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-yhk.png"/>
+						<span><img src="../img/zh-ico-yhk.png"/></span>
 						<span class="body-row-account">我的银行卡：</span>
 					</div>
 					<div class="body-row-name">
@@ -200,7 +203,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-gy.png"/>
+						<span><img src="../img/zh-ico-gy.png"/></span>
 						<span class="body-row-account">关于我们：</span>
 					</div>
 					<div class="body-row-name">
@@ -209,7 +212,7 @@
 				</div>
 				<div class="account-body-row">
 					<div class="body-row-img">
-						<img src="../img/zh-ico-gg.png"/>
+						<span><img src="../img/zh-ico-gg.png"/></span>
 						<span class="body-row-account">系统公告：</span>
 					</div>
 					<div class="body-row-name">
